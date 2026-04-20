@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - SmartCas EnergyChain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a2a 0%, #1a1a3e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo i {
+            font-size: 50px;
+            color: #00ff88;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            color: rgba(255,255,255,0.7);
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .input-group select option {
+            background: #1a1a3e;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #00ff88;
+            background: rgba(255,255,255,0.15);
+        }
+
+        .btn-register {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #00ff88, #00b4db);
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-register:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,255,136,0.3);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .login-link a {
+            color: #00ff88;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .success-message {
+            background: rgba(0,255,136,0.2);
+            border: 1px solid #00ff88;
+            border-radius: 10px;
+            padding: 10px;
+            color: #00ff88;
+            text-align: center;
+            margin-bottom: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <h1>Créer un compte</h1>
+            
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> Compte créé avec succès !
+            </div>
+            
+            <form id="registerForm">
+                <div class="input-group">
+                    <label><i class="fas fa-user"></i> Nom complet</label>
+                    <input type="text" id="fullname" placeholder="Votre nom" required>
+                </div>
+                
+                <div class="input-group">
+                    <label><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" placeholder="exemple@smartcas.ma" required>
+                </div>
+                
+                <div class="input-group">
+                    <label><i class="fas fa-lock"></i> Mot de passe</label>
+                    <input type="password" id="password" placeholder="Au moins 6 caractères" required>
+                </div>
+                
+                <div class="input-group">
+                    <label><i class="fas fa-home"></i> Adresse</label>
+                    <input type="text" id="address" placeholder="Quartier, Casablanca" required>
+                </div>
+                
+                <div class="input-group">
+                    <label><i class="fas fa-charging-station"></i> Type de logement</label>
+                    <select id="houseType">
+                        <option value="appartement">Appartement</option>
+                        <option value="maison">Maison individuelle</option>
+                        <option value="villa">Villa</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-register">
+                    <i class="fas fa-user-plus"></i> S'inscrire
+                </button>
+            </form>
+            
+            <div class="login-link">
+                Déjà inscrit ? <a href="login.html">Se connecter</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const users = JSON.parse(localStorage.getItem('smartcas_users') || '[]');
+            
+            const newUser = {
+                id: users.length + 1,
+                name: document.getElementById('fullname').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+                address: document.getElementById('address').value,
+                houseType: document.getElementById('houseType').value,
+                household_id: Math.floor(Math.random() * 4) + 1
+            };
+            
+            users.push(newUser);
+            localStorage.setItem('smartcas_users', JSON.stringify(users));
+            
+            const successMsg = document.getElementById('successMessage');
+            successMsg.style.display = 'block';
+            
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
