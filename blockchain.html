@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Energy - SmartCas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a2a 0%, #0f0f1a 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { font-size: 26px; font-weight: 800; background: linear-gradient(135deg, #00ff88, #00b4db); -webkit-background-clip: text; background-clip: text; color: transparent; cursor: pointer; }
+        .logo i { color: #00ff88; margin-right: 10px; }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: #00ff88; }
+        .btn-back { background: rgba(255,255,255,0.1); padding: 10px 25px; border-radius: 30px; }
+        
+        .container { padding: 120px 50px 50px; max-width: 1200px; margin: 0 auto; }
+        h1 { font-size: 36px; margin-bottom: 10px; }
+        .subtitle { color: rgba(255,255,255,0.6); margin-bottom: 40px; }
+        
+        .blockchain-viz {
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .block-chain {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .block {
+            background: linear-gradient(135deg, #1a1a3e, #0f0f2a);
+            border: 2px solid #00ff88;
+            border-radius: 15px;
+            padding: 20px;
+            min-width: 180px;
+            text-align: center;
+            animation: glow 2s infinite;
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(0,255,136,0.3); }
+            50% { box-shadow: 0 0 20px rgba(0,255,136,0.6); }
+        }
+        .block-header { font-size: 12px; color: #00ff88; margin-bottom: 10px; }
+        .block-hash { font-family: monospace; font-size: 11px; color: rgba(255,255,255,0.5); margin: 10px 0; }
+        .transaction { font-size: 13px; padding: 5px; background: rgba(255,255,255,0.05); border-radius: 8px; margin: 5px 0; }
+        
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-number { font-size: 32px; font-weight: 700; color: #00ff88; }
+        
+        .back-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #00ff88, #00b4db);
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 100px 20px 30px; }
+            .stats-cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'"><i class="fas fa-bolt"></i> SmartCas</div>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+            <a href="energy_exchange.html"><i class="fas fa-exchange-alt"></i> Energy Exchange</a>
+            <a href="dashboard.html" class="btn-back">Mon Dashboard</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1><i class="fas fa-link" style="color: #00ff88;"></i> Blockchain Energy</h1>
+        <p class="subtitle">Sécurisation des échanges d'énergie via la technologie blockchain</p>
+        
+        <div class="stats-cards">
+            <div class="stat-card"><div class="stat-number">47</div><div>Transactions validées</div></div>
+            <div class="stat-card"><div class="stat-number">128.5</div><div>kWh échangés</div></div>
+            <div class="stat-card"><div class="stat-number">154.2</div><div>kg CO₂ économisés</div></div>
+        </div>
+        
+        <div class="blockchain-viz">
+            <h3>📦 Derniers blocs enregistrés</h3>
+            <div class="block-chain" id="blockchain"></div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="energy_exchange.html" class="back-home"><i class="fas fa-exchange-alt"></i> Voir les transferts d'énergie</a>
+            <a href="index.html" class="back-home" style="margin-left: 15px; background: rgba(255,255,255,0.1);"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
+        </div>
+    </div>
+    
+    <script>
+        function displayBlockchain() {
+            const blocks = [
+                { index: 0, hash: "0x8f3a...b2e1", transactions: ["Genesis Block"] },
+                { index: 1, hash: "0x7d2c...9a4f", transactions: ["Maison Bleue → Maison Verte: 2.4 kWh"] },
+                { index: 2, hash: "0x3e8a...1b7c", transactions: ["Maison Rouge → Maison Orange: 1.8 kWh"] },
+                { index: 3, hash: "0x9f2b...4d8e", transactions: ["Maison Bleue → Maison Orange: 0.6 kWh"] }
+            ];
+            
+            const container = document.getElementById('blockchain');
+            container.innerHTML = blocks.map(block => `
+                <div class="block">
+                    <div class="block-header">BLOCK #${block.index}</div>
+                    <div class="block-hash">${block.hash}</div>
+                    ${block.transactions.map(tx => `<div class="transaction">⚡ ${tx}</div>`).join('')}
+                    <div class="block-hash" style="margin-top: 10px;">✅ Confirmé</div>
+                </div>
+            `).join('');
+        }
+        
+        displayBlockchain();
+    </script>
+</body>
+</html>

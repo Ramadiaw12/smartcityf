@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Connecté - SmartCas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a2a 0%, #0f0f1a 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { font-size: 26px; font-weight: 800; background: linear-gradient(135deg, #00ff88, #00b4db); -webkit-background-clip: text; background-clip: text; color: transparent; cursor: pointer; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 30px; }
+        .container { padding: 120px 50px 50px; max-width: 1000px; margin: 0 auto; }
+        h1 { font-size: 36px; margin-bottom: 20px; }
+        .iot-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin: 40px 0; }
+        .sensor-card { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 25px; text-align: center; }
+        .sensor-card i { font-size: 50px; color: #00ff88; margin-bottom: 15px; }
+        .back-home { display: inline-block; margin-top: 30px; padding: 12px 30px; background: linear-gradient(135deg, #00ff88, #00b4db); border-radius: 30px; color: white; text-decoration: none; }
+        @media (max-width: 768px) { .iot-grid { grid-template-columns: 1fr; } .container { padding: 100px 20px 30px; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'"><i class="fas fa-bolt"></i> SmartCas</div>
+        <div class="nav-links"><a href="index.html">Accueil</a></div>
+    </nav>
+    <div class="container">
+        <h1><i class="fas fa-microchip" style="color: #00ff88;"></i> IoT & Capteurs intelligents</h1>
+        <p>Notre réseau de capteurs IoT surveille en temps réel votre consommation énergétique.</p>
+        <div class="iot-grid">
+            <div class="sensor-card"><i class="fas fa-temperature-high"></i><h3>Température</h3><p>Précision: ±0.5°C</p></div>
+            <div class="sensor-card"><i class="fas fa-tint"></i><h3>Humidité</h3><p>Précision: ±3%</p></div>
+            <div class="sensor-card"><i class="fas fa-bolt"></i><h3>Consommation électrique</h3><p>Mesure en temps réel</p></div>
+            <div class="sensor-card"><i class="fas fa-solar-panel"></i><h3>Production solaire</h3><p>Suivi de la production</p></div>
+        </div>
+        <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Retour</a>
+    </div>
+</body>
+</html>
