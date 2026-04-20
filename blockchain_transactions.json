@@ -1,0 +1,40 @@
+{
+  "exchanges": [],
+  "blockchain": [
+    {
+      "index": 0,
+      "timestamp": "2026-04-20T21:10:54.036682",
+      "transactions": [],
+      "previous_hash": "0",
+      "hash": "84d259304c302cd9"
+    }
+  ],
+  "total_energy_shared": 0,
+  "total_co2_saved": 0,
+  "timestamp": "2026-04-20T21:10:54.037538",
+  "summary": {
+    "surplus_houses": [
+      {
+        "name": "Maison Orange",
+        "amount": 7.64
+      },
+      {
+        "name": "Maison Verte",
+        "amount": 6.48
+      },
+      {
+        "name": "Maison Violette",
+        "amount": 5.27
+      },
+      {
+        "name": "Maison Rouge",
+        "amount": 2.59
+      },
+      {
+        "name": "Maison Bleue",
+        "amount": 0.84
+      }
+    ],
+    "deficit_houses": []
+  }
+}

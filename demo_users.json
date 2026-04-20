@@ -1,42 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Propri\u00e9taire Maison 1",
+    "name": "Propri\u00e9taire Maison Verte",
     "email": "maison1@smartcas.ma",
     "password": "demo123",
-    "address": "Quartier Maarif, Casablanca - Maison 1",
+    "address": "Rue des Oliviers, Maarif, Casablanca",
     "household_id": 1
   },
   {
     "id": 2,
-    "name": "Propri\u00e9taire Maison 2",
+    "name": "Propri\u00e9taire Maison Bleue",
     "email": "maison2@smartcas.ma",
     "password": "demo123",
-    "address": "Quartier Maarif, Casablanca - Maison 2",
+    "address": "Boulevard Moulay Youssef, Maarif, Casablanca",
     "household_id": 2
   },
   {
     "id": 3,
-    "name": "Propri\u00e9taire Maison 3",
+    "name": "Propri\u00e9taire Maison Orange",
     "email": "maison3@smartcas.ma",
     "password": "demo123",
-    "address": "Quartier Maarif, Casablanca - Maison 3",
+    "address": "Avenue Hassan II, Maarif, Casablanca",
     "household_id": 3
   },
   {
     "id": 4,
-    "name": "Propri\u00e9taire Maison 4",
+    "name": "Propri\u00e9taire Maison Rouge",
     "email": "maison4@smartcas.ma",
     "password": "demo123",
-    "address": "Quartier Maarif, Casablanca - Maison 4",
+    "address": "Rue Allal Ben Ahmed, Maarif, Casablanca",
     "household_id": 4
   },
   {
     "id": 5,
-    "name": "Propri\u00e9taire Maison 5",
+    "name": "Propri\u00e9taire Maison Violette",
     "email": "maison5@smartcas.ma",
     "password": "demo123",
-    "address": "Quartier Maarif, Casablanca - Maison 5",
+    "address": "Rue de la Libert\u00e9, Maarif, Casablanca",
     "household_id": 5
   }
 ]
