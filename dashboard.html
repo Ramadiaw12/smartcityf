@@ -3,888 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartCas EnergyChain - Dashboard Intelligent</title>
+    <title>Mon Dashboard - SmartCas EnergyChain</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
-            background: #0a0a1a;
+            background: linear-gradient(135deg, #0a0a2a 0%, #0f0f1a 100%);
             color: white;
-            overflow-x: hidden;
+            min-height: 100vh;
         }
-
-        /* Sidebar */
         .sidebar {
             position: fixed;
             left: 0;
             top: 0;
             width: 280px;
             height: 100%;
-            background: linear-gradient(180deg, #0a0a2a 0%, #0a0a1a 100%);
+            background: rgba(10,10,42,0.95);
+            backdrop-filter: blur(10px);
             border-right: 1px solid rgba(255,255,255,0.1);
             padding: 25px 20px;
             z-index: 100;
-            overflow-y: auto;
         }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 800;
-            margin-bottom: 30px;
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .logo i {
-            color: #00ff88;
-            margin-right: 10px;
-        }
-
-        .user-info {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 15px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-        }
-
-        .avatar {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #00ff88, #00b4db);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 12px;
-            font-size: 30px;
-        }
-
-        .user-name {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .user-address {
-            font-size: 11px;
-            color: rgba(255,255,255,0.5);
-        }
-
-        .nav-menu {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .nav-menu li {
-            margin-bottom: 8px;
-        }
-
-        .nav-menu a {
-            display: flex;
-            align-items: center;
-            padding: 12px 15px;
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
-
-        .nav-menu a:hover, .nav-menu a.active {
-            background: rgba(0,255,136,0.15);
-            color: #00ff88;
-        }
-
-        .nav-menu i {
-            width: 25px;
-            margin-right: 12px;
-        }
-
-        .logout-btn {
-            width: 100%;
-            background: rgba(255,68,68,0.15);
-            color: #ff8888;
-            border: 1px solid rgba(255,68,68,0.3);
-            padding: 12px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: 0.3s;
-        }
-
-        .logout-btn:hover {
-            background: rgba(255,68,68,0.3);
-        }
-
-        /* Main Content */
-        .main-content {
-            margin-left: 280px;
-            padding: 25px 30px;
-        }
-
-        /* Header */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .page-title h1 {
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        .page-title p {
-            color: rgba(255,255,255,0.5);
-            font-size: 14px;
-        }
-
-        .period-selector {
-            display: flex;
-            gap: 10px;
-            background: rgba(255,255,255,0.05);
-            padding: 5px;
-            border-radius: 40px;
-        }
-
-        .period-btn {
-            padding: 8px 20px;
-            background: transparent;
-            border: none;
-            color: rgba(255,255,255,0.6);
-            border-radius: 30px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .period-btn.active {
-            background: linear-gradient(135deg, #00ff88, #00b4db);
-            color: white;
-        }
-
-        /* Cartes Statistiques */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: 0.3s;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-3px);
-            background: rgba(255,255,255,0.08);
-        }
-
-        .stat-icon {
-            font-size: 35px;
-            margin-bottom: 10px;
-        }
-
-        .stat-value {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            color: rgba(255,255,255,0.6);
-            font-size: 13px;
-        }
-
-        .stat-change {
-            font-size: 12px;
-            margin-top: 8px;
-        }
-
-        .positive {
-            color: #00ff88;
-        }
-
-        .negative {
-            color: #ff4444;
-        }
-
-        /* Section Graphiques */
-        .charts-section {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        .chart-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .chart-card h3 {
-            margin-bottom: 20px;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .chart-card canvas {
-            max-height: 280px;
-        }
-
-        /* Section Flux d'énergie entre maisons */
-        .energy-flow-section {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .energy-flow-section h3 {
-            margin-bottom: 20px;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .houses-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .house-card {
-            background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.15);
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        .house-card.selected {
-            border: 2px solid #00ff88;
-            box-shadow: 0 0 20px rgba(0,255,136,0.2);
-        }
-
-        .house-icon {
-            font-size: 45px;
-            margin-bottom: 10px;
-        }
-
-        .house-name {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .house-stats {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            font-size: 13px;
-        }
-
-        .consumption-value {
-            color: #ffaa00;
-        }
-
-        .production-value {
-            color: #00ff88;
-        }
-
-        .balance-value {
-            font-size: 14px;
-            font-weight: 600;
-            padding: 5px;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-
-        .balance-surplus {
-            background: rgba(0,255,136,0.2);
-            color: #00ff88;
-        }
-
-        .balance-deficit {
-            background: rgba(255,68,68,0.2);
-            color: #ff8888;
-        }
-
-        .progress-bar {
-            height: 6px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 3px;
-            margin: 10px 0;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            border-radius: 3px;
-            transition: width 0.3s;
-        }
-
-        /* Flux d'énergie visuel */
-        .energy-flows {
-            background: rgba(0,0,0,0.3);
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        .flow-title {
-            font-size: 14px;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 15px;
-        }
-
-        .flow-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .flow-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 15px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
-            animation: pulse 1s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
-        }
-
-        .flow-direction {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .flow-arrow {
-            font-size: 20px;
-            animation: flowMove 0.5s infinite alternate;
-        }
-
-        @keyframes flowMove {
-            from { transform: translateX(0); }
-            to { transform: translateX(5px); }
-        }
-
-        .flow-amount {
-            font-weight: 700;
-            color: #00ff88;
-        }
-
-        /* Répartition appareils */
-        .appliances-section {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 20px;
-        }
-
-        .appliance-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .appliance-name i {
-            width: 25px;
-            margin-right: 10px;
-        }
-
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .charts-section { grid-template-columns: 1fr; }
-            .houses-container { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 768px) {
-            .sidebar { display: none; }
-            .main-content { margin-left: 0; }
-            .stats-grid { grid-template-columns: 1fr; }
-            .houses-container { grid-template-columns: 1fr; }
-        }
-
-        /* Loading */
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 50%;
-            border-top-color: #00ff88;
-            animation: spin 0.8s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
+        .logo { font-size: 24px; font-weight: 800; margin-bottom: 30px; text-align: center; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
+        .logo i { color: #00ff88; margin-right: 10px; }
+        .user-info { text-align: center; margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 20px; }
+        .avatar { width: 80px; height: 80px; background: linear-gradient(135deg, #00ff88, #00b4db); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 36px; }
+        .user-name { font-size: 18px; font-weight: 600; margin-bottom: 5px; }
+        .user-address { font-size: 12px; color: rgba(255,255,255,0.5); }
+        .house-badge { margin-top: 10px; padding: 5px 12px; background: rgba(0,255,136,0.2); border-radius: 20px; font-size: 12px; display: inline-block; }
+        .nav-menu { list-style: none; margin-bottom: 30px; }
+        .nav-menu li { margin-bottom: 8px; }
+        .nav-menu a { display: flex; align-items: center; padding: 12px 15px; color: rgba(255,255,255,0.7); text-decoration: none; border-radius: 12px; transition: 0.3s; }
+        .nav-menu a:hover, .nav-menu a.active { background: rgba(0,255,136,0.15); color: #00ff88; }
+        .nav-menu i { width: 25px; margin-right: 12px; }
+        .logout-btn { width: 100%; background: rgba(255,68,68,0.15); color: #ff8888; border: 1px solid rgba(255,68,68,0.3); padding: 12px; border-radius: 12px; cursor: pointer; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; position: absolute; bottom: 25px; left: 20px; width: calc(100% - 40px); }
+        .logout-btn:hover { background: rgba(255,68,68,0.3); }
+        .main-content { margin-left: 280px; padding: 25px 30px; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px; }
+        .page-title h1 { font-size: 24px; font-weight: 700; }
+        .page-title p { color: rgba(255,255,255,0.5); font-size: 14px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 30px; }
+        .stat-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 20px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; }
+        .stat-card:hover { transform: translateY(-3px); background: rgba(255,255,255,0.08); }
+        .stat-icon { font-size: 35px; margin-bottom: 10px; }
+        .stat-value { font-size: 28px; font-weight: 700; margin-bottom: 5px; }
+        .stat-label { color: rgba(255,255,255,0.6); font-size: 13px; }
+        .charts-section { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-bottom: 30px; }
+        .chart-card { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        .chart-card h3 { margin-bottom: 20px; font-size: 18px; display: flex; align-items: center; gap: 10px; }
+        .chart-card canvas { max-height: 280px; }
+        .prediction-section { background: linear-gradient(135deg, rgba(0,255,136,0.1), rgba(0,180,219,0.05)); border-radius: 20px; padding: 25px; border: 1px solid rgba(0,255,136,0.3); }
+        .prediction-badge { display: inline-block; background: #00ff88; color: #0a0a2a; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-left: 10px; }
+        .last-update { font-size: 11px; color: rgba(255,255,255,0.4); text-align: right; margin-top: 20px; }
+        @media (max-width: 1024px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .charts-section { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .sidebar { display: none; } .main-content { margin-left: 0; } }
+        .loading { display: flex; justify-content: center; align-items: center; height: 200px; }
+        .spinner { width: 50px; height: 50px; border: 3px solid rgba(0,255,136,0.3); border-top-color: #00ff88; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="logo">
-            <i class="fas fa-bolt"></i> SmartCas
-        </div>
-        
-        <div class="user-info" id="userInfo">
-            <div class="avatar">
-                <i class="fas fa-user"></i>
-            </div>
+        <div class="logo" onclick="window.location.href='index.html'"><i class="fas fa-bolt"></i> SmartCas</div>
+        <div class="user-info">
+            <div class="avatar"><i class="fas fa-user"></i></div>
             <div class="user-name" id="userName">Chargement...</div>
             <div class="user-address" id="userAddress"></div>
+            <div class="house-badge" id="houseBadge"></div>
         </div>
-        
         <ul class="nav-menu">
-            <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-            <li><a href="#"><i class="fas fa-chart-line"></i> Consommation</a></li>
-            <li><a href="#"><i class="fas fa-charging-station"></i> Energy Flow</a></li>
-            <li><a href="#"><i class="fas fa-cogs"></i> Paramètres</a></li>
+            <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Mon Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Historique</a></li>
+            <li><a href="#"><i class="fas fa-robot"></i> Prédictions IA</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Paramètres</a></li>
         </ul>
-        
-        <button class="logout-btn" onclick="logout()">
-            <i class="fas fa-sign-out-alt"></i> Déconnexion
-        </button>
+        <button class="logout-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Déconnexion</button>
     </div>
     
     <div class="main-content">
         <div class="header">
             <div class="page-title">
-                <h1>Dashboard Énergétique</h1>
-                <p><i class="fas fa-map-marker-alt"></i> Quartier Maarif, Casablanca</p>
-            </div>
-            <div class="period-selector">
-                <button class="period-btn active" data-period="day">Aujourd'hui</button>
-                <button class="period-btn" data-period="week">Cette semaine</button>
-                <button class="period-btn" data-period="month">Ce mois</button>
+                <h1>Mon Dashboard Énergétique</h1>
+                <p><i class="fas fa-map-marker-alt"></i> <span id="locationText">Quartier Maarif, Casablanca</span></p>
             </div>
         </div>
         
-        <!-- Cartes Statistiques -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-bolt" style="color: #ffaa00;"></i></div>
-                <div class="stat-value" id="totalConsumption">0</div>
-                <div class="stat-label">Consommation totale (kWh)</div>
-                <div class="stat-change positive" id="consumptionChange">+0% vs hier</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-solar-panel" style="color: #00ff88;"></i></div>
-                <div class="stat-value" id="totalProduction">0</div>
-                <div class="stat-label">Production solaire (kWh)</div>
-                <div class="stat-change positive" id="productionChange">+0% vs hier</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-coins" style="color: #ffd700;"></i></div>
-                <div class="stat-value" id="savings">0</div>
-                <div class="stat-label">Économies réalisées (DH)</div>
-                <div class="stat-change positive" id="savingsChange">+0% vs hier</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-leaf" style="color: #00ff88;"></i></div>
-                <div class="stat-value" id="efficiency">0<span style="font-size: 16px;">%</span></div>
-                <div class="stat-label">Efficacité énergétique</div>
-                <div class="stat-change positive" id="efficiencyChange">+0% vs hier</div>
-            </div>
-        </div>
-        
-        <!-- Graphiques -->
-        <div class="charts-section">
-            <div class="chart-card">
-                <h3><i class="fas fa-chart-line" style="color: #00ff88;"></i> Évolution de la consommation (24h)</h3>
-                <canvas id="consumptionChart"></canvas>
-            </div>
-            <div class="chart-card">
-                <h3><i class="fas fa-chart-pie" style="color: #ffaa00;"></i> Répartition par appareil</h3>
-                <canvas id="applianceChart"></canvas>
-            </div>
-        </div>
-        
-        <!-- SECTION FLUX D'ÉNERGIE ENTRE MAISONS (CRITIQUE) -->
-        <div class="energy-flow-section">
-            <h3><i class="fas fa-exchange-alt" style="color: #00ff88;"></i> Flux d'Énergie entre Maisons - Quartier Maarif</h3>
-            
-            <div class="houses-container" id="housesContainer">
-                <!-- Les 4 maisons seront générées ici dynamiquement -->
-            </div>
-            
-            <div class="energy-flows">
-                <div class="flow-title">
-                    <i class="fas fa-bolt"></i> Transferts d'énergie actifs
-                    <span style="float: right;" id="lastUpdate">Dernière mise à jour: maintenant</span>
-                </div>
-                <div class="flow-list" id="flowList">
-                    <div style="text-align: center; padding: 20px;">Chargement des flux...</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Répartition par appareil détaillée -->
-        <div class="appliances-section">
-            <h3 style="margin-bottom: 15px;"><i class="fas fa-microchip"></i> Détail de la consommation par équipement</h3>
-            <div id="appliancesList"></div>
+        <div id="dashboardContent">
+            <div class="loading"><div class="spinner"></div><span style="margin-left: 15px;">Chargement de vos données...</span></div>
         </div>
     </div>
 
     <script>
-        // ============================================
-        // DONNÉES SIMULÉES POUR 4 MAISONS
-        // ============================================
+        let userData = null;
+        let consumptionChart = null;
+        let predictionChart = null;
         
-        const HOUSES = [
-            { id: 1, name: 'Maison A', color: '#4CAF50', consumption: 2.8, production: 1.2, battery: 65, type: 'appartement', occupants: 4 },
-            { id: 2, name: 'Maison B', color: '#2196F3', consumption: 1.9, production: 2.5, battery: 82, type: 'maison', occupants: 3 },
-            { id: 3, name: 'Maison C', color: '#FF9800', consumption: 3.5, production: 0.9, battery: 34, type: 'appartement', occupants: 6 },
-            { id: 4, name: 'Maison D', color: '#E91E63', consumption: 1.6, production: 2.8, battery: 91, type: 'maison', occupants: 2 }
-        ];
-        
-        // Consommation horaire simulée (kWh)
-        const HOURLY_CONSUMPTION = [
-            0.8, 0.6, 0.5, 0.4, 0.5, 0.7,  // 00-05
-            1.2, 1.8, 2.1, 1.9, 1.5, 1.8,  // 06-11
-            2.0, 1.7, 1.6, 1.9, 2.3, 2.8,  // 12-17
-            3.2, 3.5, 3.8, 3.2, 2.5, 1.5   // 18-23
-        ];
-        
-        // Production solaire horaire (kWh)
-        const HOURLY_PRODUCTION = [
-            0, 0, 0, 0, 0, 0.2,
-            0.5, 1.2, 2.0, 2.8, 3.2, 3.5,
-            3.4, 3.1, 2.8, 2.2, 1.5, 0.8,
-            0.3, 0.1, 0, 0, 0, 0
-        ];
-        
-        // Variables globales
-        let currentPeriod = 'day';
-        let charts = {};
-        let updateInterval;
-        
-        // ============================================
-        // FONCTIONS PRINCIPALES
-        // ============================================
-        
-        // Calculer les transferts d'énergie entre maisons
-        function calculateEnergyTransfers() {
-            const surplusHouses = HOUSES.filter(h => h.production > h.consumption)
-                .map(h => ({ id: h.id, name: h.name, surplus: h.production - h.consumption }));
-            const deficitHouses = HOUSES.filter(h => h.consumption > h.production)
-                .map(h => ({ id: h.id, name: h.name, deficit: h.consumption - h.production }));
-            
-            const transfers = [];
-            
-            for (let surplus of surplusHouses) {
-                let remaining = surplus.surplus;
-                for (let deficit of deficitHouses) {
-                    if (remaining <= 0) break;
-                    const amount = Math.min(remaining, deficit.deficit);
-                    if (amount > 0) {
-                        transfers.push({
-                            from: surplus.id,
-                            fromName: surplus.name,
-                            to: deficit.id,
-                            toName: deficit.name,
-                            amount: amount.toFixed(2)
-                        });
-                        remaining -= amount;
-                        deficit.deficit -= amount;
-                    }
-                }
-            }
-            
-            return transfers;
+        function getCurrentUser() {
+            const user = localStorage.getItem('smartcas_current_user');
+            if (!user) { window.location.href = 'login.html'; return null; }
+            return JSON.parse(user);
         }
         
-        // Mettre à jour l'affichage des maisons
-        function updateHousesDisplay() {
-            const container = document.getElementById('housesContainer');
-            container.innerHTML = HOUSES.map(house => {
-                const balance = house.production - house.consumption;
-                const balanceClass = balance >= 0 ? 'balance-surplus' : 'balance-deficit';
-                const balanceText = balance >= 0 ? `+${balance.toFixed(2)} kW` : `${balance.toFixed(2)} kW`;
-                const batteryPercent = (house.battery / 100) * 100;
-                
-                return `
-                    <div class="house-card" onclick="selectHouse(${house.id})">
-                        <div class="house-icon">
-                            <i class="fas fa-home" style="color: ${house.color};"></i>
-                        </div>
-                        <div class="house-name">${house.name}</div>
-                        <div class="house-stats">
-                            <span><i class="fas fa-plug"></i> <span class="consumption-value">${house.consumption.toFixed(1)}</span> kW</span>
-                            <span><i class="fas fa-solar-panel"></i> <span class="production-value">${house.production.toFixed(1)}</span> kW</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: ${batteryPercent}%; background: ${house.battery > 70 ? '#00ff88' : (house.battery > 30 ? '#ffaa00' : '#ff4444')};"></div>
-                        </div>
-                        <div class="balance-value ${balanceClass}">
-                            ${balanceText}
-                        </div>
-                        <div style="font-size: 11px; margin-top: 8px;">
-                            <i class="fas fa-battery-${house.battery > 66 ? 'full' : (house.battery > 33 ? 'half' : 'low')}"></i> ${Math.round(house.battery)}%
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-        
-        // Mettre à jour l'affichage des flux
-        function updateFlowsDisplay() {
-            const transfers = calculateEnergyTransfers();
-            const flowList = document.getElementById('flowList');
-            
-            if (transfers.length === 0) {
-                flowList.innerHTML = '<div style="text-align: center; padding: 20px;">⚡ Aucun transfert actif - Production équilibrée</div>';
-                return;
-            }
-            
-            flowList.innerHTML = transfers.map(transfer => `
-                <div class="flow-item">
-                    <div class="flow-direction">
-                        <span style="color: #00ff88;"><i class="fas fa-home"></i> ${transfer.fromName}</span>
-                        <i class="fas fa-arrow-right flow-arrow" style="color: #ffaa00;"></i>
-                        <span style="color: #ff8888;"><i class="fas fa-home"></i> ${transfer.toName}</span>
-                    </div>
-                    <div class="flow-amount">
-                        ${transfer.amount} kWh <i class="fas fa-bolt"></i>
-                    </div>
-                </div>
-            `).join('');
-        }
-        
-        // Mettre à jour les statistiques globales
-        function updateGlobalStats() {
-            const totalConso = HOUSES.reduce((sum, h) => sum + h.consumption, 0);
-            const totalProd = HOUSES.reduce((sum, h) => sum + h.production, 0);
-            const totalSavings = (totalProd - totalConso) * 1.2;
-            const efficiency = totalProd > 0 ? (totalProd / totalConso * 100) : 0;
-            
-            document.getElementById('totalConsumption').innerHTML = totalConso.toFixed(1);
-            document.getElementById('totalProduction').innerHTML = totalProd.toFixed(1);
-            document.getElementById('savings').innerHTML = totalSavings > 0 ? totalSavings.toFixed(0) : '0';
-            document.getElementById('efficiency').innerHTML = efficiency.toFixed(0);
-            
-            // Mise à jour des changements (simulés)
-            const randomChange = (Math.random() * 10 - 5).toFixed(1);
-            document.getElementById('consumptionChange').innerHTML = `${randomChange >= 0 ? '+' : ''}${randomChange}% vs hier`;
-            document.getElementById('productionChange').innerHTML = `${(Math.random() * 15 + 5).toFixed(1)}% vs hier`;
-            document.getElementById('savingsChange').innerHTML = `${(Math.random() * 20 + 2).toFixed(1)}% vs hier`;
-            document.getElementById('efficiencyChange').innerHTML = `${(Math.random() * 5 + 1).toFixed(1)}% vs hier`;
-        }
-        
-        // Mettre à jour les graphiques
-        function updateCharts() {
-            if (charts.consumptionChart) {
-                const currentHour = new Date().getHours();
-                const labels = Array.from({length: 24}, (_, i) => `${i}h`);
-                
-                charts.consumptionChart.data.datasets[0].data = HOURLY_CONSUMPTION;
-                charts.consumptionChart.data.datasets[1].data = HOURLY_PRODUCTION;
-                charts.consumptionChart.update();
-            }
-        }
-        
-        // Mettre à jour la répartition des appareils
-        function updateAppliances() {
-            const appliances = [
-                { name: 'Climatisation', icon: 'fa-snowflake', percent: 42, consumption: 1.2 },
-                { name: 'Chauffage', icon: 'fa-fire', percent: 18, consumption: 0.5 },
-                { name: 'Éclairage', icon: 'fa-lightbulb', percent: 12, consumption: 0.34 },
-                { name: 'Réfrigérateur', icon: 'fa-fridge', percent: 15, consumption: 0.42 },
-                { name: 'Appareils électroniques', icon: 'fa-tv', percent: 8, consumption: 0.23 },
-                { name: 'Autres', icon: 'fa-plug', percent: 5, consumption: 0.14 }
-            ];
-            
-            const totalConso = HOUSES.reduce((sum, h) => sum + h.consumption, 0);
-            
-            const container = document.getElementById('appliancesList');
-            container.innerHTML = appliances.map(app => `
-                <div class="appliance-item">
-                    <div class="appliance-name">
-                        <i class="fas ${app.icon}" style="color: #00ff88;"></i> ${app.name}
-                    </div>
-                    <div class="appliance-stats">
-                        <span style="color: #ffaa00;">${(app.percent * totalConso / 100).toFixed(1)} kWh</span>
-                        <span style="color: rgba(255,255,255,0.5); margin-left: 10px;">(${app.percent}%)</span>
-                    </div>
-                </div>
-            `).join('');
-        }
-        
-        // Simulation de variation en temps réel
-        function simulateRealTimeVariation() {
-            // Faire varier aléatoirement la consommation et production
-            HOUSES.forEach(house => {
-                // Variation de consommation (±3%)
-                let variation = (Math.random() - 0.5) * 0.15;
-                house.consumption = Math.max(0.5, Math.min(5, house.consumption + variation));
-                
-                // Variation de production (±2%)
-                variation = (Math.random() - 0.5) * 0.1;
-                house.production = Math.max(0.3, Math.min(4, house.production + variation));
-                
-                // Variation de batterie
-                if (house.production > house.consumption) {
-                    house.battery = Math.min(100, house.battery + 1.5);
-                } else {
-                    house.battery = Math.max(0, house.battery - 1.2);
-                }
-            });
-            
-            // Mettre à jour tout l'affichage
-            updateHousesDisplay();
-            updateFlowsDisplay();
-            updateGlobalStats();
-            updateAppliances();
-            
-            document.getElementById('lastUpdate').innerHTML = `Dernière mise à jour: ${new Date().toLocaleTimeString()}`;
-        }
-        
-        // Sélectionner une maison (interaction)
-        function selectHouse(houseId) {
-            const house = HOUSES.find(h => h.id === houseId);
-            if (house) {
-                alert(`🏠 ${house.name}\n📊 Consommation: ${house.consumption.toFixed(1)} kWh\n☀️ Production: ${house.production.toFixed(1)} kWh\n🔋 Batterie: ${Math.round(house.battery)}%\n👥 Occupants: ${house.occupants}\n🏘️ Type: ${house.type}`);
-            }
-        }
-        
-        // Déconnexion
-        function logout() {
-            localStorage.removeItem('smartcas_current_user');
-            window.location.href = 'login.html';
-        }
-        
-        // Initialiser les graphiques
-        function initCharts() {
-            const ctx1 = document.getElementById('consumptionChart').getContext('2d');
-            charts.consumptionChart = new Chart(ctx1, {
-                type: 'line',
-                data: {
-                    labels: Array.from({length: 24}, (_, i) => `${i}h`),
-                    datasets: [
-                        {
-                            label: 'Consommation (kWh)',
-                            data: HOURLY_CONSUMPTION,
-                            borderColor: '#ffaa00',
-                            backgroundColor: 'rgba(255,170,0,0.1)',
-                            fill: true,
-                            tension: 0.4
-                        },
-                        {
-                            label: 'Production solaire (kWh)',
-                            data: HOURLY_PRODUCTION,
-                            borderColor: '#00ff88',
-                            backgroundColor: 'rgba(0,255,136,0.1)',
-                            fill: true,
-                            tension: 0.4
+        async function loadUserEnergyData(householdId) {
+            try {
+                const response = await fetch('user_energy_data.json?_=' + Date.now());
+                if (response.ok) {
+                    const allData = await response.json();
+                    // Chercher les données pour cette maison spécifique
+                    for (const [email, data] of Object.entries(allData)) {
+                        if (data.household_id === householdId) {
+                            return data;
                         }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    plugins: {
-                        legend: { labels: { color: 'white' } }
-                    },
-                    scales: {
-                        y: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: 'white' } },
-                        x: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: 'white', rotation: 45 } }
                     }
                 }
-            });
-            
-            const ctx2 = document.getElementById('applianceChart').getContext('2d');
-            charts.applianceChart = new Chart(ctx2, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Climatisation', 'Chauffage', 'Éclairage', 'Réfrigérateur', 'Électronique', 'Autres'],
-                    datasets: [{
-                        data: [42, 18, 12, 15, 8, 5],
-                        backgroundColor: ['#00ff88', '#ffaa00', '#ff4444', '#2196F3', '#9C27B0', '#FF9800']
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { labels: { color: 'white', font: { size: 11 } } }
-                    }
-                }
-            });
+                // Données simulées basées sur l'ID maison
+                return generateSimulatedData(householdId);
+            } catch (error) {
+                return generateSimulatedData(householdId);
+            }
         }
         
-        // Charger les données utilisateur
-        function loadUserData() {
-            const user = JSON.parse(localStorage.getItem('smartcas_current_user'));
-            if (!user) {
-                window.location.href = 'login.html';
-                return;
-            }
+        function generateSimulatedData(houseId) {
+            const baseConsumption = [0.8, 0.6, 0.5, 0.4, 0.5, 0.7, 1.2, 1.8, 2.1, 1.9, 1.5, 1.8, 2.0, 1.7, 1.6, 1.9, 2.3, 2.8, 3.2, 3.5, 3.8, 3.2, 2.5, 1.5];
+            // Variation par maison pour les rendre différentes
+            const variation = (houseId - 2.5) * 0.15;
+            const consumption = baseConsumption.map(c => Math.max(0.3, c + variation));
+            const predictions = consumption.map(c => c * (0.85 + Math.random() * 0.2));
+            const avgConsumption = consumption.reduce((a,b) => a+b, 0) / 24;
+            
+            const houseNames = { 1: "Maison Verte", 2: "Maison Bleue", 3: "Maison Orange", 4: "Maison Rouge" };
+            const houseAddresses = { 1: "Rue des Oliviers", 2: "Boulevard Moulay Youssef", 3: "Avenue Hassan II", 4: "Rue Allal Ben Ahmed" };
+            
+            return {
+                user_name: `Propriétaire ${houseNames[houseId]}`,
+                household_id: houseId,
+                address: `${houseAddresses[houseId]}, Maarif, Casablanca`,
+                hourly_consumption: consumption,
+                predictions: predictions,
+                stats: {
+                    total_consumption_today: consumption.reduce((a,b) => a+b, 0),
+                    avg_consumption: avgConsumption,
+                    peak_consumption: Math.max(...consumption),
+                    min_consumption: Math.min(...consumption),
+                    efficiency_score: 65 + (houseId * 3) + Math.random() * 10
+                },
+                last_update: new Date().toLocaleString()
+            };
+        }
+        
+        async function renderDashboard() {
+            const user = getCurrentUser();
+            if (!user) return;
             
             document.getElementById('userName').innerHTML = user.name || user.email.split('@')[0];
-            document.getElementById('userAddress').innerHTML = user.address || 'Maarif, Casablanca';
+            document.getElementById('userAddress').innerHTML = user.address || 'Quartier Maarif, Casablanca';
+            
+            // Charger UNIQUEMENT les données de CETTE maison
+            userData = await loadUserEnergyData(user.household_id);
+            
+            const houseNames = { 1: "Verte", 2: "Bleue", 3: "Orange", 4: "Rouge" };
+            document.getElementById('houseBadge').innerHTML = `<i class="fas fa-home"></i> Maison ${houseNames[user.household_id]}`;
+            
+            const content = `
+                <div class="stats-grid">
+                    <div class="stat-card"><div class="stat-icon"><i class="fas fa-bolt" style="color: #ffaa00;"></i></div><div class="stat-value">${userData.stats.total_consumption_today.toFixed(1)}</div><div class="stat-label">Consommation aujourd'hui (kWh)</div></div>
+                    <div class="stat-card"><div class="stat-icon"><i class="fas fa-chart-line" style="color: #00ff88;"></i></div><div class="stat-value">${userData.stats.avg_consumption.toFixed(2)}</div><div class="stat-label">Moyenne par période (kWh)</div></div>
+                    <div class="stat-card"><div class="stat-icon"><i class="fas fa-arrow-up" style="color: #ff4444;"></i></div><div class="stat-value">${userData.stats.peak_consumption.toFixed(2)}</div><div class="stat-label">Pic de consommation (kWh)</div></div>
+                    <div class="stat-card"><div class="stat-icon"><i class="fas fa-leaf" style="color: #00ff88;"></i></div><div class="stat-value">${userData.stats.efficiency_score.toFixed(0)}<span style="font-size: 16px;">%</span></div><div class="stat-label">Score d'efficacité</div></div>
+                </div>
+                <div class="charts-section">
+                    <div class="chart-card"><h3><i class="fas fa-chart-line" style="color: #ffaa00;"></i> Ma consommation (dernières 24h)</h3><canvas id="consumptionChartCanvas"></canvas></div>
+                    <div class="chart-card"><h3><i class="fas fa-robot" style="color: #00ff88;"></i> Prédictions IA <span class="prediction-badge">prochaines 24h</span></h3><canvas id="predictionChartCanvas"></canvas></div>
+                </div>
+                <div class="prediction-section"><h3><i class="fas fa-brain"></i> Analyse intelligente</h3><p style="margin-bottom: 15px;">Basé sur vos données de consommation réelles :</p><div id="recommendations"></div></div>
+                <div class="last-update" id="lastUpdate"></div>
+            `;
+            
+            document.getElementById('dashboardContent').innerHTML = content;
+            createConsumptionChart();
+            createPredictionChart();
+            generateRecommendations();
+            document.getElementById('lastUpdate').innerHTML = `🔄 Dernière mise à jour: ${new Date().toLocaleString()}`;
         }
         
-        // Initialisation
-        function init() {
-            loadUserData();
-            initCharts();
-            updateHousesDisplay();
-            updateFlowsDisplay();
-            updateGlobalStats();
-            updateAppliances();
-            
-            // Lancer la simulation temps réel toutes les 3 secondes
-            updateInterval = setInterval(simulateRealTimeVariation, 3000);
-            
-            // Sélecteur de période
-            document.querySelectorAll('.period-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    currentPeriod = btn.dataset.period;
-                    // Ici on pourrait charger différentes données selon la période
-                });
+        function createConsumptionChart() {
+            const ctx = document.getElementById('consumptionChartCanvas').getContext('2d');
+            const labels = Array.from({length: 24}, (_, i) => `${i}h`);
+            if (consumptionChart) consumptionChart.destroy();
+            consumptionChart = new Chart(ctx, {
+                type: 'line',
+                data: { labels: labels, datasets: [{ label: 'Ma consommation (kWh)', data: userData.hourly_consumption, borderColor: '#ffaa00', backgroundColor: 'rgba(255,170,0,0.1)', fill: true, tension: 0.4, pointRadius: 3, pointBackgroundColor: '#ffaa00' }] },
+                options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { labels: { color: 'white' } }, tooltip: { callbacks: { label: (ctx) => `${ctx.raw.toFixed(3)} kWh` } } }, scales: { y: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: 'white' }, title: { display: true, text: 'kWh', color: 'white' } }, x: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: 'white', rotation: 45 } } } }
             });
         }
         
-        // Démarrer l'application
-        init();
+        function createPredictionChart() {
+            const ctx = document.getElementById('predictionChartCanvas').getContext('2d');
+            const labels = Array.from({length: 24}, (_, i) => `H+${i+1}`);
+            if (predictionChart) predictionChart.destroy();
+            predictionChart = new Chart(ctx, {
+                type: 'line',
+                data: { labels: labels, datasets: [{ label: 'Prédiction IA (kWh)', data: userData.predictions, borderColor: '#00ff88', backgroundColor: 'rgba(0,255,136,0.1)', fill: true, tension: 0.4, pointRadius: 3, pointBackgroundColor: '#00ff88', borderDash: [5, 5] }] },
+                options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { labels: { color: 'white' } }, tooltip: { callbacks: { label: (ctx) => `${ctx.raw.toFixed(3)} kWh prévu` } } }, scales: { y: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: 'white' }, title: { display: true, text: 'kWh', color: 'white' } }, x: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: 'white', rotation: 45 } } } }
+            });
+        }
+        
+        function generateRecommendations() {
+            const peak = userData.stats.peak_consumption;
+            const efficiency = userData.stats.efficiency_score;
+            let recommendations = [];
+            if (peak > 3.0) recommendations.push('🔴 Votre pic de consommation est élevé (>3 kWh). Essayez de décaler l\'utilisation des appareils énergivores après 22h.');
+            if (efficiency < 70) recommendations.push('🟡 Votre score d\'efficacité est faible. Programmez un audit énergétique gratuit.');
+            const maxIndex = userData.hourly_consumption.indexOf(Math.max(...userData.hourly_consumption));
+            recommendations.push(`💡 Votre heure de pointe est vers ${maxIndex}h. Évitez d'utiliser plusieurs appareils à cette heure.`);
+            recommendations.push(`🤖 Prédiction IA : Dans 1 heure, votre consommation sera d'environ ${userData.predictions[0].toFixed(2)} kWh.`);
+            document.getElementById('recommendations').innerHTML = recommendations.map(r => `<p style="margin: 8px 0;"><i class="fas fa-lightbulb" style="color: #00ff88; margin-right: 10px;"></i>${r}</p>`).join('');
+        }
+        
+        function logout() { localStorage.removeItem('smartcas_current_user'); window.location.href = 'index.html'; }
+        
+        renderDashboard();
     </script>
 </body>
 </html>

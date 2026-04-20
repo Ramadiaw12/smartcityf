@@ -7,27 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a0a2a 0%, #1a1a3e 100%);
+            background: linear-gradient(135deg, #0a0a2a 0%, #0f0f1a 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-
-        .container {
-            width: 100%;
-            max-width: 450px;
-            padding: 20px;
-        }
-
+        .container { width: 100%; max-width: 450px; padding: 20px; }
         .card {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(20px);
@@ -36,40 +25,12 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.3);
             border: 1px solid rgba(255,255,255,0.2);
         }
-
-        .logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .logo i {
-            font-size: 50px;
-            color: #00ff88;
-        }
-
-        .logo h2 {
-            color: white;
-            margin-top: 10px;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        .input-group label {
-            color: rgba(255,255,255,0.7);
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
+        .logo { text-align: center; margin-bottom: 30px; }
+        .logo i { font-size: 50px; color: #00ff88; }
+        .logo h2 { color: white; margin-top: 10px; }
+        h1 { color: white; text-align: center; margin-bottom: 30px; font-size: 28px; }
+        .input-group { margin-bottom: 20px; }
+        .input-group label { color: rgba(255,255,255,0.7); display: block; margin-bottom: 8px; font-weight: 500; }
         .input-group input {
             width: 100%;
             padding: 15px 20px;
@@ -80,13 +41,11 @@
             font-size: 16px;
             transition: 0.3s;
         }
-
         .input-group input:focus {
             outline: none;
             border-color: #00ff88;
             background: rgba(255,255,255,0.15);
         }
-
         .btn-login {
             width: 100%;
             padding: 15px;
@@ -100,24 +59,9 @@
             transition: 0.3s;
             margin-top: 10px;
         }
-
-        .btn-login:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,255,136,0.3);
-        }
-
-        .register-link {
-            text-align: center;
-            margin-top: 20px;
-            color: rgba(255,255,255,0.6);
-        }
-
-        .register-link a {
-            color: #00ff88;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
+        .btn-login:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,255,136,0.3); }
+        .register-link { text-align: center; margin-top: 20px; color: rgba(255,255,255,0.6); }
+        .register-link a { color: #00ff88; text-decoration: none; font-weight: 600; }
         .error-message {
             background: rgba(255,68,68,0.2);
             border: 1px solid #ff4444;
@@ -128,91 +72,65 @@
             margin-bottom: 20px;
             display: none;
         }
-
-        .back-home {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .back-home a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-        }
+        .back-home { text-align: center; margin-top: 20px; }
+        .back-home a { color: rgba(255,255,255,0.6); text-decoration: none; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <div class="logo">
-                <i class="fas fa-bolt"></i>
-                <h2>SmartCas</h2>
-            </div>
+            <div class="logo"><i class="fas fa-bolt"></i><h2>SmartCas</h2></div>
             <h1>Connexion</h1>
-            
-            <div class="error-message" id="errorMessage">
-                <i class="fas fa-exclamation-triangle"></i> Email ou mot de passe incorrect
-            </div>
-            
+            <div class="error-message" id="errorMessage"><i class="fas fa-exclamation-triangle"></i> Email ou mot de passe incorrect</div>
             <form id="loginForm">
-                <div class="input-group">
-                    <label><i class="fas fa-envelope"></i> Email</label>
-                    <input type="email" id="email" placeholder="exemple@smartcas.ma" required>
-                </div>
-                
-                <div class="input-group">
-                    <label><i class="fas fa-lock"></i> Mot de passe</label>
-                    <input type="password" id="password" placeholder="••••••••" required>
-                </div>
-                
-                <button type="submit" class="btn-login">
-                    <i class="fas fa-arrow-right"></i> Se connecter
-                </button>
+                <div class="input-group"><label><i class="fas fa-envelope"></i> Email</label><input type="email" id="email" placeholder="exemple@smartcas.ma" required></div>
+                <div class="input-group"><label><i class="fas fa-lock"></i> Mot de passe</label><input type="password" id="password" placeholder="••••••••" required></div>
+                <button type="submit" class="btn-login"><i class="fas fa-arrow-right"></i> Se connecter</button>
             </form>
-            
-            <div class="register-link">
-                Pas encore de compte ? <a href="register.html">Créer un compte</a>
-            </div>
-            <div class="back-home">
-                <a href="index.html"><i class="fas fa-home"></i> Retour à l'accueil</a>
-            </div>
+            <div class="register-link">Pas encore de compte ? <a href="register.html">Créer un compte</a></div>
+            <div class="back-home"><a href="index.html"><i class="fas fa-home"></i> Retour à l'accueil</a></div>
         </div>
     </div>
-
     <script>
-        const users = JSON.parse(localStorage.getItem('smartcas_users') || '[]');
+        // Initialiser les comptes de démonstration pour les 4 maisons
+        function initDemoUsers() {
+            const existingUsers = JSON.parse(localStorage.getItem('smartcas_users') || '[]');
+            const demoHouses = [
+                { id: 1, name: "Propriétaire Maison Verte", email: "maison1@smartcas.ma", password: "demo123", address: "Rue des Oliviers, Maarif", household_id: 1 },
+                { id: 2, name: "Propriétaire Maison Bleue", email: "maison2@smartcas.ma", password: "demo123", address: "Boulevard Moulay Youssef", household_id: 2 },
+                { id: 3, name: "Propriétaire Maison Orange", email: "maison3@smartcas.ma", password: "demo123", address: "Avenue Hassan II", household_id: 3 },
+                { id: 4, name: "Propriétaire Maison Rouge", email: "maison4@smartcas.ma", password: "demo123", address: "Rue Allal Ben Ahmed", household_id: 4 }
+            ];
+            for (const demo of demoHouses) {
+                if (!existingUsers.find(u => u.email === demo.email)) {
+                    existingUsers.push(demo);
+                }
+            }
+            localStorage.setItem('smartcas_users', JSON.stringify(existingUsers));
+        }
+        
+        initDemoUsers();
         
         document.getElementById('loginForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            
+            const users = JSON.parse(localStorage.getItem('smartcas_users') || '[]');
             const user = users.find(u => u.email === email && u.password === password);
             
             if (user) {
                 localStorage.setItem('smartcas_current_user', JSON.stringify(user));
+                // Rediriger vers le dashboard ou vers la maison cible
+                const targetHouse = localStorage.getItem('smartcas_target_house');
+                if (targetHouse && user.household_id == targetHouse) {
+                    localStorage.removeItem('smartcas_target_house');
+                }
                 window.location.href = 'dashboard.html';
             } else {
-                const errorMsg = document.getElementById('errorMessage');
-                errorMsg.style.display = 'block';
-                setTimeout(() => {
-                    errorMsg.style.display = 'none';
-                }, 3000);
+                document.getElementById('errorMessage').style.display = 'block';
+                setTimeout(() => { document.getElementById('errorMessage').style.display = 'none'; }, 3000);
             }
         });
-        
-        // Compte de démonstration
-        if (users.length === 0) {
-            users.push({
-                id: 1,
-                name: 'Karim Benjelloun',
-                email: 'karim@smartcas.ma',
-                password: 'demo123',
-                household_id: 1,
-                address: 'Maarif, Casablanca'
-            });
-            localStorage.setItem('smartcas_users', JSON.stringify(users));
-        }
     </script>
 </body>
 </html>

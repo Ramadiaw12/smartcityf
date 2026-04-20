@@ -1,0 +1,2852 @@
+{
+  "maison1@smartcas.ma": {
+    "user_email": "maison1@smartcas.ma",
+    "user_name": "Propri\u00e9taire Maison 1",
+    "household_id": 1,
+    "address": "Quartier Maarif, Casablanca - Maison 1",
+    "hourly_consumption": [
+      0.1867615845798924,
+      0.1614537424627199,
+      0.1954562673479276,
+      0.1539283617817244,
+      0.1758176355768697,
+      0.1075370282722546,
+      0.1857697234835871,
+      0.1021373834445045,
+      0.1129356807548099,
+      0.151952587762881,
+      0.1557855869712599,
+      0.1277313803847188,
+      0.0830514611423995,
+      0.1675054904077724,
+      0.2097044777585097,
+      0.1570599436780207,
+      0.2084066265119936,
+      0.2224504804949701,
+      0.2292031149282499,
+      0.2254833738131229,
+      0.2079420786185668,
+      0.2342098087749566,
+      0.212436487717448,
+      0.2158654964577437
+    ],
+    "predictions": [
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.171,
+      0.171,
+      0.171,
+      0.171
+    ],
+    "stats": {
+      "total_consumption_today": 4.190585803126904,
+      "avg_consumption": 0.2806628128390464,
+      "peak_consumption": 0.4636336386168709,
+      "min_consumption": 0.0830514611423995,
+      "total_production": 0.0,
+      "avg_flux": -0.2806628128390464,
+      "efficiency_score": 63.20726339713818
+    },
+    "historical_data": [
+      {
+        "timestamp": "2024-01-01 07:00:00",
+        "energy_consumption_kWh": 0.3719684474013943,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:05:00",
+        "energy_consumption_kWh": 0.4066634252955983,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:10:00",
+        "energy_consumption_kWh": 0.3759767499928579,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:15:00",
+        "energy_consumption_kWh": 0.3062054703840416,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:20:00",
+        "energy_consumption_kWh": 0.3829735671447331,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:25:00",
+        "energy_consumption_kWh": 0.3656888516980665,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:30:00",
+        "energy_consumption_kWh": 0.3201397257465919,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:35:00",
+        "energy_consumption_kWh": 0.2795524568258469,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:40:00",
+        "energy_consumption_kWh": 0.2846375067984914,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:45:00",
+        "energy_consumption_kWh": 0.2266056040743604,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:50:00",
+        "energy_consumption_kWh": 0.2359322862137236,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:55:00",
+        "energy_consumption_kWh": 0.2473979900995668,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:00:00",
+        "energy_consumption_kWh": 0.2313278471898144,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:05:00",
+        "energy_consumption_kWh": 0.2149451874462993,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:10:00",
+        "energy_consumption_kWh": 0.214156685012037,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:15:00",
+        "energy_consumption_kWh": 0.230399209692536,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:20:00",
+        "energy_consumption_kWh": 0.2057880314698121,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:25:00",
+        "energy_consumption_kWh": 0.1733007537880434,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:30:00",
+        "energy_consumption_kWh": 0.1189266834730004,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:35:00",
+        "energy_consumption_kWh": 0.1344583879696764,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:40:00",
+        "energy_consumption_kWh": 0.1348614717374864,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:45:00",
+        "energy_consumption_kWh": 0.15413949795341,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:50:00",
+        "energy_consumption_kWh": 0.135368552241538,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:55:00",
+        "energy_consumption_kWh": 0.1249278234208085,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:00:00",
+        "energy_consumption_kWh": 0.1979625469994652,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:05:00",
+        "energy_consumption_kWh": 0.1203977120749745,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:10:00",
+        "energy_consumption_kWh": 0.1536338863289018,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:15:00",
+        "energy_consumption_kWh": 0.1290685014898007,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:20:00",
+        "energy_consumption_kWh": 0.169382172575893,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:25:00",
+        "energy_consumption_kWh": 0.184140650343185,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:30:00",
+        "energy_consumption_kWh": 0.1789332357818725,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:35:00",
+        "energy_consumption_kWh": 0.1511294581800334,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:40:00",
+        "energy_consumption_kWh": 0.2466511400418515,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:45:00",
+        "energy_consumption_kWh": 0.1736055355017831,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:50:00",
+        "energy_consumption_kWh": 0.2463080373428413,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:55:00",
+        "energy_consumption_kWh": 0.1879357255985063,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:00:00",
+        "energy_consumption_kWh": 0.2395146541399787,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:05:00",
+        "energy_consumption_kWh": 0.2379964508512179,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:10:00",
+        "energy_consumption_kWh": 0.2212576938712914,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:15:00",
+        "energy_consumption_kWh": 0.3067154959026296,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:20:00",
+        "energy_consumption_kWh": 0.2716374943361216,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:25:00",
+        "energy_consumption_kWh": 0.338656271698331,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:30:00",
+        "energy_consumption_kWh": 0.3359162100413388,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:35:00",
+        "energy_consumption_kWh": 0.3160526508513267,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:40:00",
+        "energy_consumption_kWh": 0.2969447986845721,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:45:00",
+        "energy_consumption_kWh": 0.3745410915876659,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:50:00",
+        "energy_consumption_kWh": 0.3851487529317529,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:55:00",
+        "energy_consumption_kWh": 0.4098841422039883,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:00:00",
+        "energy_consumption_kWh": 0.4383340242337339,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:05:00",
+        "energy_consumption_kWh": 0.3732812135153015,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:10:00",
+        "energy_consumption_kWh": 0.4310193266509037,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:15:00",
+        "energy_consumption_kWh": 0.3845037390094032,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:20:00",
+        "energy_consumption_kWh": 0.4066553126619815,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:25:00",
+        "energy_consumption_kWh": 0.4130978212735592,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:30:00",
+        "energy_consumption_kWh": 0.4358136327320458,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:35:00",
+        "energy_consumption_kWh": 0.4065553502781358,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:40:00",
+        "energy_consumption_kWh": 0.3805408720748206,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:45:00",
+        "energy_consumption_kWh": 0.3938119079045026,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:50:00",
+        "energy_consumption_kWh": 0.4124995364793475,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:55:00",
+        "energy_consumption_kWh": 0.3906732315847866,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:00:00",
+        "energy_consumption_kWh": 0.3973328342583431,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:05:00",
+        "energy_consumption_kWh": 0.4386220901569336,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:10:00",
+        "energy_consumption_kWh": 0.3990478733326335,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:15:00",
+        "energy_consumption_kWh": 0.3663439085562218,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:20:00",
+        "energy_consumption_kWh": 0.4198009241838039,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:25:00",
+        "energy_consumption_kWh": 0.3557324001997543,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:30:00",
+        "energy_consumption_kWh": 0.2941974967963107,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:35:00",
+        "energy_consumption_kWh": 0.3162899026215965,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:40:00",
+        "energy_consumption_kWh": 0.2686315569194079,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:45:00",
+        "energy_consumption_kWh": 0.2974834242816206,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:50:00",
+        "energy_consumption_kWh": 0.3033331208103672,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:55:00",
+        "energy_consumption_kWh": 0.2823364368817409,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:00:00",
+        "energy_consumption_kWh": 0.2939784918922636,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:05:00",
+        "energy_consumption_kWh": 0.2025261291599179,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:10:00",
+        "energy_consumption_kWh": 0.2155810144233839,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:15:00",
+        "energy_consumption_kWh": 0.1757253020766765,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:20:00",
+        "energy_consumption_kWh": 0.1867615845798924,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:25:00",
+        "energy_consumption_kWh": 0.1614537424627199,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:30:00",
+        "energy_consumption_kWh": 0.1954562673479276,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:35:00",
+        "energy_consumption_kWh": 0.1539283617817244,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:40:00",
+        "energy_consumption_kWh": 0.1758176355768697,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:45:00",
+        "energy_consumption_kWh": 0.1075370282722546,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:50:00",
+        "energy_consumption_kWh": 0.1857697234835871,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:55:00",
+        "energy_consumption_kWh": 0.1021373834445045,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:00:00",
+        "energy_consumption_kWh": 0.1129356807548099,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:05:00",
+        "energy_consumption_kWh": 0.151952587762881,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:10:00",
+        "energy_consumption_kWh": 0.1557855869712599,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:15:00",
+        "energy_consumption_kWh": 0.1277313803847188,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:20:00",
+        "energy_consumption_kWh": 0.0830514611423995,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:25:00",
+        "energy_consumption_kWh": 0.1675054904077724,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:30:00",
+        "energy_consumption_kWh": 0.2097044777585097,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:35:00",
+        "energy_consumption_kWh": 0.1570599436780207,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:40:00",
+        "energy_consumption_kWh": 0.2084066265119936,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:45:00",
+        "energy_consumption_kWh": 0.2224504804949701,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:50:00",
+        "energy_consumption_kWh": 0.2292031149282499,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:55:00",
+        "energy_consumption_kWh": 0.2254833738131229,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 15:00:00",
+        "energy_consumption_kWh": 0.2079420786185668,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 15:05:00",
+        "energy_consumption_kWh": 0.2342098087749566,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 15:10:00",
+        "energy_consumption_kWh": 0.212436487717448,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 15:15:00",
+        "energy_consumption_kWh": 0.2158654964577437,
+        "production_solaire": 0.0
+      }
+    ],
+    "last_update": "2026-04-20 20:08:01"
+  },
+  "maison2@smartcas.ma": {
+    "user_email": "maison2@smartcas.ma",
+    "user_name": "Propri\u00e9taire Maison 2",
+    "household_id": 2,
+    "address": "Quartier Maarif, Casablanca - Maison 2",
+    "hourly_consumption": [
+      0.2423032626987098,
+      0.1792362459202588,
+      0.2074869488070911,
+      0.1665386339017066,
+      0.1468870003534619,
+      0.135059759408735,
+      0.1351698265950972,
+      0.1071803209044647,
+      0.1370335513615485,
+      0.1452509155785287,
+      0.1592664601290599,
+      0.1473884756687687,
+      0.2374555151682333,
+      0.1880677979162803,
+      0.1402422021984285,
+      0.1374246263101894,
+      0.2062817237877424,
+      0.1949289567582366,
+      0.1911873012501708,
+      0.1653207443994717,
+      0.2502951660837702,
+      0.18453499554589,
+      0.2165814855178294,
+      0.2747659650611038
+    ],
+    "predictions": [
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.171,
+      0.171,
+      0.171,
+      0.171
+    ],
+    "stats": {
+      "total_consumption_today": 4.295887881324777,
+      "avg_consumption": 0.2807228159474193,
+      "peak_consumption": 0.4772840501084499,
+      "min_consumption": 0.0975258292179606,
+      "total_production": 0.0,
+      "avg_flux": -0.2807228159474193,
+      "efficiency_score": 62.67276887438228
+    },
+    "historical_data": [
+      {
+        "timestamp": "2024-01-01 07:00:00",
+        "energy_consumption_kWh": 0.3806772489500867,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:05:00",
+        "energy_consumption_kWh": 0.3454865018536908,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:10:00",
+        "energy_consumption_kWh": 0.3903293796722815,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:15:00",
+        "energy_consumption_kWh": 0.3190317580564387,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:20:00",
+        "energy_consumption_kWh": 0.3418024335309381,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:25:00",
+        "energy_consumption_kWh": 0.308403364072874,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:30:00",
+        "energy_consumption_kWh": 0.2886867828679595,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:35:00",
+        "energy_consumption_kWh": 0.2550884922907881,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:40:00",
+        "energy_consumption_kWh": 0.2778582151163494,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:45:00",
+        "energy_consumption_kWh": 0.2835696038736051,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:50:00",
+        "energy_consumption_kWh": 0.2234040358049308,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 07:55:00",
+        "energy_consumption_kWh": 0.2149397832692874,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:00:00",
+        "energy_consumption_kWh": 0.2908450966045005,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:05:00",
+        "energy_consumption_kWh": 0.167060705780875,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:10:00",
+        "energy_consumption_kWh": 0.2101256442972059,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:15:00",
+        "energy_consumption_kWh": 0.1417701093100889,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:20:00",
+        "energy_consumption_kWh": 0.2029587517530459,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:25:00",
+        "energy_consumption_kWh": 0.1588408096359558,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:30:00",
+        "energy_consumption_kWh": 0.2077442789443935,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:35:00",
+        "energy_consumption_kWh": 0.1615582175420099,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:40:00",
+        "energy_consumption_kWh": 0.1173049986238976,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:45:00",
+        "energy_consumption_kWh": 0.1604493230470384,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:50:00",
+        "energy_consumption_kWh": 0.1405851037745886,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 08:55:00",
+        "energy_consumption_kWh": 0.1284584145714367,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:00:00",
+        "energy_consumption_kWh": 0.1487680754034838,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:05:00",
+        "energy_consumption_kWh": 0.1334441111209086,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:10:00",
+        "energy_consumption_kWh": 0.1533626475041033,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:15:00",
+        "energy_consumption_kWh": 0.122661415291846,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:20:00",
+        "energy_consumption_kWh": 0.144500885639842,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:25:00",
+        "energy_consumption_kWh": 0.1454659811291723,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:30:00",
+        "energy_consumption_kWh": 0.1755258528754744,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:35:00",
+        "energy_consumption_kWh": 0.1736324084458299,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:40:00",
+        "energy_consumption_kWh": 0.166492775508817,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:45:00",
+        "energy_consumption_kWh": 0.1560160503270563,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:50:00",
+        "energy_consumption_kWh": 0.2439114629134712,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 09:55:00",
+        "energy_consumption_kWh": 0.2978299725165815,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:00:00",
+        "energy_consumption_kWh": 0.2727841439324019,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:05:00",
+        "energy_consumption_kWh": 0.285223411808637,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:10:00",
+        "energy_consumption_kWh": 0.2512700709452945,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:15:00",
+        "energy_consumption_kWh": 0.267498270358569,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:20:00",
+        "energy_consumption_kWh": 0.3098483017926881,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:25:00",
+        "energy_consumption_kWh": 0.3439592036334676,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:30:00",
+        "energy_consumption_kWh": 0.2945215003431898,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:35:00",
+        "energy_consumption_kWh": 0.3396769095358368,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:40:00",
+        "energy_consumption_kWh": 0.3705670672335382,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:45:00",
+        "energy_consumption_kWh": 0.3574445445459977,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:50:00",
+        "energy_consumption_kWh": 0.3569563105446563,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 10:55:00",
+        "energy_consumption_kWh": 0.4356805569508139,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:00:00",
+        "energy_consumption_kWh": 0.3594870968708909,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:05:00",
+        "energy_consumption_kWh": 0.3831202117389396,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:10:00",
+        "energy_consumption_kWh": 0.3894060555934641,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:15:00",
+        "energy_consumption_kWh": 0.4287974251662674,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:20:00",
+        "energy_consumption_kWh": 0.4734445298755438,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:25:00",
+        "energy_consumption_kWh": 0.4062825657924128,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:30:00",
+        "energy_consumption_kWh": 0.4258050339305718,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:35:00",
+        "energy_consumption_kWh": 0.438443794880089,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:40:00",
+        "energy_consumption_kWh": 0.4186339186522211,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:45:00",
+        "energy_consumption_kWh": 0.3711086231604211,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:50:00",
+        "energy_consumption_kWh": 0.4109092277880159,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 11:55:00",
+        "energy_consumption_kWh": 0.4145379956109489,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:00:00",
+        "energy_consumption_kWh": 0.3982649982119971,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:05:00",
+        "energy_consumption_kWh": 0.3618483561395986,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:10:00",
+        "energy_consumption_kWh": 0.4127208101245783,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:15:00",
+        "energy_consumption_kWh": 0.4029402453013156,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:20:00",
+        "energy_consumption_kWh": 0.30096923493275,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:25:00",
+        "energy_consumption_kWh": 0.3207042551899816,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:30:00",
+        "energy_consumption_kWh": 0.3181200145698916,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:35:00",
+        "energy_consumption_kWh": 0.3178662817056893,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:40:00",
+        "energy_consumption_kWh": 0.312578805440621,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:45:00",
+        "energy_consumption_kWh": 0.251631996916336,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:50:00",
+        "energy_consumption_kWh": 0.276861985146416,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 12:55:00",
+        "energy_consumption_kWh": 0.296183417543375,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:00:00",
+        "energy_consumption_kWh": 0.2619441696064735,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:05:00",
+        "energy_consumption_kWh": 0.2433235528559061,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:10:00",
+        "energy_consumption_kWh": 0.1835613408493513,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:15:00",
+        "energy_consumption_kWh": 0.1896103765020068,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:20:00",
+        "energy_consumption_kWh": 0.2423032626987098,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:25:00",
+        "energy_consumption_kWh": 0.1792362459202588,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:30:00",
+        "energy_consumption_kWh": 0.2074869488070911,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:35:00",
+        "energy_consumption_kWh": 0.1665386339017066,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:40:00",
+        "energy_consumption_kWh": 0.1468870003534619,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:45:00",
+        "energy_consumption_kWh": 0.135059759408735,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:50:00",
+        "energy_consumption_kWh": 0.1351698265950972,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 13:55:00",
+        "energy_consumption_kWh": 0.1071803209044647,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:00:00",
+        "energy_consumption_kWh": 0.1370335513615485,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:05:00",
+        "energy_consumption_kWh": 0.1452509155785287,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:10:00",
+        "energy_consumption_kWh": 0.1592664601290599,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:15:00",
+        "energy_consumption_kWh": 0.1473884756687687,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:20:00",
+        "energy_consumption_kWh": 0.2374555151682333,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:25:00",
+        "energy_consumption_kWh": 0.1880677979162803,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:30:00",
+        "energy_consumption_kWh": 0.1402422021984285,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:35:00",
+        "energy_consumption_kWh": 0.1374246263101894,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:40:00",
+        "energy_consumption_kWh": 0.2062817237877424,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:45:00",
+        "energy_consumption_kWh": 0.1949289567582366,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:50:00",
+        "energy_consumption_kWh": 0.1911873012501708,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 14:55:00",
+        "energy_consumption_kWh": 0.1653207443994717,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 15:00:00",
+        "energy_consumption_kWh": 0.2502951660837702,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 15:05:00",
+        "energy_consumption_kWh": 0.18453499554589,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 15:10:00",
+        "energy_consumption_kWh": 0.2165814855178294,
+        "production_solaire": 0.0
+      },
+      {
+        "timestamp": "2024-01-01 15:15:00",
+        "energy_consumption_kWh": 0.2747659650611038,
+        "production_solaire": 0.0
+      }
+    ],
+    "last_update": "2026-04-20 20:08:02"
+  },
+  "maison3@smartcas.ma": {
+    "user_email": "maison3@smartcas.ma",
+    "user_name": "Propri\u00e9taire Maison 3",
+    "household_id": 3,
+    "address": "Quartier Maarif, Casablanca - Maison 3",
+    "hourly_consumption": [
+      0.0651825689930278,
+      0.0740185814472328,
+      0.0655223130811225,
+      0.0808544306465832,
+      0.0856678297713634,
+      0.0561774436935223,
+      0.0706650492976479,
+      0.0574781566304718,
+      0.0524327707571538,
+      0.0514760286574867,
+      0.0618649109543444,
+      0.0562982865697114,
+      0.0711193846503369,
+      0.0762482704963358,
+      0.0707372674994617,
+      0.0930609022674489,
+      0.0818870503255455,
+      0.1006853617312214,
+      0.0823007718876649,
+      0.1194849792945491,
+      0.1016178296369488,
+      0.1122388388224205,
+      0.0999898477488391,
+      0.1227211014940417
+    ],
+    "predictions": [
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.171,
+      0.171,
+      0.171,
+      0.171
+    ],
+    "stats": {
+      "total_consumption_today": 1.9097299763544824,
+      "avg_consumption": 0.12140473982805614,
+      "peak_consumption": 0.1955944061706099,
+      "min_consumption": 0.0350511169377379,
+      "total_production": 32.33382621165536,
+      "avg_flux": 0.054322576539636014,
+      "efficiency_score": 64.40811784787752
+    },
+    "historical_data": [
+      {
+        "timestamp": "2024-01-01 07:00:00",
+        "energy_consumption_kWh": 0.1507283999581458,
+        "production_solaire": 0.0402298033747662
+      },
+      {
+        "timestamp": "2024-01-01 07:05:00",
+        "energy_consumption_kWh": 0.1580262399592103,
+        "production_solaire": 0.0431258242111319
+      },
+      {
+        "timestamp": "2024-01-01 07:10:00",
+        "energy_consumption_kWh": 0.144057834689808,
+        "production_solaire": 0.0461853964506552
+      },
+      {
+        "timestamp": "2024-01-01 07:15:00",
+        "energy_consumption_kWh": 0.1430892773931139,
+        "production_solaire": 0.0494139660807113
+      },
+      {
+        "timestamp": "2024-01-01 07:20:00",
+        "energy_consumption_kWh": 0.1666325123222205,
+        "production_solaire": 0.0528168527493853
+      },
+      {
+        "timestamp": "2024-01-01 07:25:00",
+        "energy_consumption_kWh": 0.1384741694308659,
+        "production_solaire": 0.0563992195501185
+      },
+      {
+        "timestamp": "2024-01-01 07:30:00",
+        "energy_consumption_kWh": 0.1252753011532484,
+        "production_solaire": 0.0601660414971761
+      },
+      {
+        "timestamp": "2024-01-01 07:35:00",
+        "energy_consumption_kWh": 0.1060061180759626,
+        "production_solaire": 0.0641220727917802
+      },
+      {
+        "timestamp": "2024-01-01 07:40:00",
+        "energy_consumption_kWh": 0.1107889469981975,
+        "production_solaire": 0.0682718129940611
+      },
+      {
+        "timestamp": "2024-01-01 07:45:00",
+        "energy_consumption_kWh": 0.1259229197097806,
+        "production_solaire": 0.0726194722314202
+      },
+      {
+        "timestamp": "2024-01-01 07:50:00",
+        "energy_consumption_kWh": 0.097076055315692,
+        "production_solaire": 0.0771689355893046
+      },
+      {
+        "timestamp": "2024-01-01 07:55:00",
+        "energy_consumption_kWh": 0.1067437984200032,
+        "production_solaire": 0.0819237268456536
+      },
+      {
+        "timestamp": "2024-01-01 08:00:00",
+        "energy_consumption_kWh": 0.1037551116496477,
+        "production_solaire": 0.0868869717252225
+      },
+      {
+        "timestamp": "2024-01-01 08:05:00",
+        "energy_consumption_kWh": 0.0944371156983321,
+        "production_solaire": 0.0920613608644829
+      },
+      {
+        "timestamp": "2024-01-01 08:10:00",
+        "energy_consumption_kWh": 0.1155679098068409,
+        "production_solaire": 0.0974491126916623
+      },
+      {
+        "timestamp": "2024-01-01 08:15:00",
+        "energy_consumption_kWh": 0.091823778393689,
+        "production_solaire": 0.1030519364395776
+      },
+      {
+        "timestamp": "2024-01-01 08:20:00",
+        "energy_consumption_kWh": 0.0910145367579211,
+        "production_solaire": 0.1088709955210483
+      },
+      {
+        "timestamp": "2024-01-01 08:25:00",
+        "energy_consumption_kWh": 0.0861690494241306,
+        "production_solaire": 0.1149068715077014
+      },
+      {
+        "timestamp": "2024-01-01 08:30:00",
+        "energy_consumption_kWh": 0.090563271420283,
+        "production_solaire": 0.1211595289627194
+      },
+      {
+        "timestamp": "2024-01-01 08:35:00",
+        "energy_consumption_kWh": 0.0668379571298767,
+        "production_solaire": 0.1276282813863837
+      },
+      {
+        "timestamp": "2024-01-01 08:40:00",
+        "energy_consumption_kWh": 0.0754473949476518,
+        "production_solaire": 0.1343117585399661
+      },
+      {
+        "timestamp": "2024-01-01 08:45:00",
+        "energy_consumption_kWh": 0.0350511169377379,
+        "production_solaire": 0.1412078754184799
+      },
+      {
+        "timestamp": "2024-01-01 08:50:00",
+        "energy_consumption_kWh": 0.076393843697463,
+        "production_solaire": 0.148313803145858
+      },
+      {
+        "timestamp": "2024-01-01 08:55:00",
+        "energy_consumption_kWh": 0.0519329440705653,
+        "production_solaire": 0.1556259420671857
+      },
+      {
+        "timestamp": "2024-01-01 09:00:00",
+        "energy_consumption_kWh": 0.0368198391141218,
+        "production_solaire": 0.1631398973115197
+      },
+      {
+        "timestamp": "2024-01-01 09:05:00",
+        "energy_consumption_kWh": 0.0714061587370764,
+        "production_solaire": 0.1708504570955114
+      },
+      {
+        "timestamp": "2024-01-01 09:10:00",
+        "energy_consumption_kWh": 0.060104144003891,
+        "production_solaire": 0.1787515740324124
+      },
+      {
+        "timestamp": "2024-01-01 09:15:00",
+        "energy_consumption_kWh": 0.0453376322427241,
+        "production_solaire": 0.1868363497030215
+      },
+      {
+        "timestamp": "2024-01-01 09:20:00",
+        "energy_consumption_kWh": 0.070018360250484,
+        "production_solaire": 0.1950970227346782
+      },
+      {
+        "timestamp": "2024-01-01 09:25:00",
+        "energy_consumption_kWh": 0.0478629019907748,
+        "production_solaire": 0.2035249606215198
+      },
+      {
+        "timestamp": "2024-01-01 09:30:00",
+        "energy_consumption_kWh": 0.0963130981068197,
+        "production_solaire": 0.212110655503862
+      },
+      {
+        "timestamp": "2024-01-01 09:35:00",
+        "energy_consumption_kWh": 0.0792519058780663,
+        "production_solaire": 0.2208437241067976
+      },
+      {
+        "timestamp": "2024-01-01 09:40:00",
+        "energy_consumption_kWh": 0.0851308528405365,
+        "production_solaire": 0.2297129120179632
+      },
+      {
+        "timestamp": "2024-01-01 09:45:00",
+        "energy_consumption_kWh": 0.0891283461125068,
+        "production_solaire": 0.2387061024619817
+      },
+      {
+        "timestamp": "2024-01-01 09:50:00",
+        "energy_consumption_kWh": 0.0962017918102574,
+        "production_solaire": 0.2478103297044486
+      },
+      {
+        "timestamp": "2024-01-01 09:55:00",
+        "energy_consumption_kWh": 0.103448058856952,
+        "production_solaire": 0.2570117971916338
+      },
+      {
+        "timestamp": "2024-01-01 10:00:00",
+        "energy_consumption_kWh": 0.0786181790626133,
+        "production_solaire": 0.2662959005034486
+      },
+      {
+        "timestamp": "2024-01-01 10:05:00",
+        "energy_consumption_kWh": 0.1038796799321346,
+        "production_solaire": 0.2756472551668769
+      },
+      {
+        "timestamp": "2024-01-01 10:10:00",
+        "energy_consumption_kWh": 0.1224108006813946,
+        "production_solaire": 0.285049729345198
+      },
+      {
+        "timestamp": "2024-01-01 10:15:00",
+        "energy_consumption_kWh": 0.1531113027199592,
+        "production_solaire": 0.2944864813851332
+      },
+      {
+        "timestamp": "2024-01-01 10:20:00",
+        "energy_consumption_kWh": 0.1200243711062526,
+        "production_solaire": 0.303940002169814
+      },
+      {
+        "timestamp": "2024-01-01 10:25:00",
+        "energy_consumption_kWh": 0.1265225116853869,
+        "production_solaire": 0.3133921621904387
+      },
+      {
+        "timestamp": "2024-01-01 10:30:00",
+        "energy_consumption_kWh": 0.1291356558413829,
+        "production_solaire": 0.322824263213946
+      },
+      {
+        "timestamp": "2024-01-01 10:35:00",
+        "energy_consumption_kWh": 0.1452359579617589,
+        "production_solaire": 0.3322170943882868
+      },
+      {
+        "timestamp": "2024-01-01 10:40:00",
+        "energy_consumption_kWh": 0.1369067008084606,
+        "production_solaire": 0.3415509925912443
+      },
+      {
+        "timestamp": "2024-01-01 10:45:00",
+        "energy_consumption_kWh": 0.1699126938250435,
+        "production_solaire": 0.3508059067935256
+      },
+      {
+        "timestamp": "2024-01-01 10:50:00",
+        "energy_consumption_kWh": 0.174856536547886,
+        "production_solaire": 0.35996146617238
+      },
+      {
+        "timestamp": "2024-01-01 10:55:00",
+        "energy_consumption_kWh": 0.1659109176246091,
+        "production_solaire": 0.3689970516786128
+      },
+      {
+        "timestamp": "2024-01-01 11:00:00",
+        "energy_consumption_kWh": 0.1778969725794509,
+        "production_solaire": 0.3778918707278627
+      },
+      {
+        "timestamp": "2024-01-01 11:05:00",
+        "energy_consumption_kWh": 0.1817250496980347,
+        "production_solaire": 0.3866250346567497
+      },
+      {
+        "timestamp": "2024-01-01 11:10:00",
+        "energy_consumption_kWh": 0.1781395517190746,
+        "production_solaire": 0.3951756385562721
+      },
+      {
+        "timestamp": "2024-01-01 11:15:00",
+        "energy_consumption_kWh": 0.1741678089895442,
+        "production_solaire": 0.403522843068943
+      },
+      {
+        "timestamp": "2024-01-01 11:20:00",
+        "energy_consumption_kWh": 0.1790277566866144,
+        "production_solaire": 0.4116459577128902
+      },
+      {
+        "timestamp": "2024-01-01 11:25:00",
+        "energy_consumption_kWh": 0.1932786358810369,
+        "production_solaire": 0.4195245252757864
+      },
+      {
+        "timestamp": "2024-01-01 11:30:00",
+        "energy_consumption_kWh": 0.1786640965665491,
+        "production_solaire": 0.4271384068042397
+      },
+      {
+        "timestamp": "2024-01-01 11:35:00",
+        "energy_consumption_kWh": 0.1699240468127548,
+        "production_solaire": 0.4344678667004101
+      },
+      {
+        "timestamp": "2024-01-01 11:40:00",
+        "energy_consumption_kWh": 0.188348343150649,
+        "production_solaire": 0.4414936574273019
+      },
+      {
+        "timestamp": "2024-01-01 11:45:00",
+        "energy_consumption_kWh": 0.1693285148346395,
+        "production_solaire": 0.4481971033175752
+      },
+      {
+        "timestamp": "2024-01-01 11:50:00",
+        "energy_consumption_kWh": 0.1799237342000986,
+        "production_solaire": 0.4545601829779538
+      },
+      {
+        "timestamp": "2024-01-01 11:55:00",
+        "energy_consumption_kWh": 0.1734185061151637,
+        "production_solaire": 0.4605656097824748
+      },
+      {
+        "timestamp": "2024-01-01 12:00:00",
+        "energy_consumption_kWh": 0.1561763368343913,
+        "production_solaire": 0.4661969099529741
+      },
+      {
+        "timestamp": "2024-01-01 12:05:00",
+        "energy_consumption_kWh": 0.1664196825372228,
+        "production_solaire": 0.4714384977343608
+      },
+      {
+        "timestamp": "2024-01-01 12:10:00",
+        "energy_consumption_kWh": 0.169294197719075,
+        "production_solaire": 0.4762757471853697
+      },
+      {
+        "timestamp": "2024-01-01 12:15:00",
+        "energy_consumption_kWh": 0.1631295706542328,
+        "production_solaire": 0.4806950601225407
+      },
+      {
+        "timestamp": "2024-01-01 12:20:00",
+        "energy_consumption_kWh": 0.140419894601517,
+        "production_solaire": 0.4846839297760509
+      },
+      {
+        "timestamp": "2024-01-01 12:25:00",
+        "energy_consumption_kWh": 0.1566109572467547,
+        "production_solaire": 0.4882309997405905
+      },
+      {
+        "timestamp": "2024-01-01 12:30:00",
+        "energy_consumption_kWh": 0.1652588219990431,
+        "production_solaire": 0.4913261178325366
+      },
+      {
+        "timestamp": "2024-01-01 12:35:00",
+        "energy_consumption_kWh": 0.1540605375474212,
+        "production_solaire": 0.4939603844960413
+      },
+      {
+        "timestamp": "2024-01-01 12:40:00",
+        "energy_consumption_kWh": 0.1315307881600874,
+        "production_solaire": 0.4961261954350603
+      },
+      {
+        "timestamp": "2024-01-01 12:45:00",
+        "energy_consumption_kWh": 0.1244761776088006,
+        "production_solaire": 0.497817278185523
+      },
+      {
+        "timestamp": "2024-01-01 12:50:00",
+        "energy_consumption_kWh": 0.1230536022473961,
+        "production_solaire": 0.4990287223814848
+      },
+      {
+        "timestamp": "2024-01-01 12:55:00",
+        "energy_consumption_kWh": 0.1077348080712957,
+        "production_solaire": 0.4997570035108762
+      },
+      {
+        "timestamp": "2024-01-01 13:00:00",
+        "energy_consumption_kWh": 0.1238860671456354,
+        "production_solaire": 0.5
+      },
+      {
+        "timestamp": "2024-01-01 13:05:00",
+        "energy_consumption_kWh": 0.0903983076536583,
+        "production_solaire": 0.4997570035108762
+      },
+      {
+        "timestamp": "2024-01-01 13:10:00",
+        "energy_consumption_kWh": 0.0883358886909769,
+        "production_solaire": 0.4990287223814848
+      },
+      {
+        "timestamp": "2024-01-01 13:15:00",
+        "energy_consumption_kWh": 0.0865666731184329,
+        "production_solaire": 0.497817278185523
+      },
+      {
+        "timestamp": "2024-01-01 13:20:00",
+        "energy_consumption_kWh": 0.0651825689930278,
+        "production_solaire": 0.4961261954350603
+      },
+      {
+        "timestamp": "2024-01-01 13:25:00",
+        "energy_consumption_kWh": 0.0740185814472328,
+        "production_solaire": 0.4939603844960413
+      },
+      {
+        "timestamp": "2024-01-01 13:30:00",
+        "energy_consumption_kWh": 0.0655223130811225,
+        "production_solaire": 0.4913261178325366
+      },
+      {
+        "timestamp": "2024-01-01 13:35:00",
+        "energy_consumption_kWh": 0.0808544306465832,
+        "production_solaire": 0.4882309997405905
+      },
+      {
+        "timestamp": "2024-01-01 13:40:00",
+        "energy_consumption_kWh": 0.0856678297713634,
+        "production_solaire": 0.4846839297760509
+      },
+      {
+        "timestamp": "2024-01-01 13:45:00",
+        "energy_consumption_kWh": 0.0561774436935223,
+        "production_solaire": 0.4806950601225407
+      },
+      {
+        "timestamp": "2024-01-01 13:50:00",
+        "energy_consumption_kWh": 0.0706650492976479,
+        "production_solaire": 0.4762757471853697
+      },
+      {
+        "timestamp": "2024-01-01 13:55:00",
+        "energy_consumption_kWh": 0.0574781566304718,
+        "production_solaire": 0.4714384977343608
+      },
+      {
+        "timestamp": "2024-01-01 14:00:00",
+        "energy_consumption_kWh": 0.0524327707571538,
+        "production_solaire": 0.4661969099529741
+      },
+      {
+        "timestamp": "2024-01-01 14:05:00",
+        "energy_consumption_kWh": 0.0514760286574867,
+        "production_solaire": 0.4605656097824748
+      },
+      {
+        "timestamp": "2024-01-01 14:10:00",
+        "energy_consumption_kWh": 0.0618649109543444,
+        "production_solaire": 0.4545601829779538
+      },
+      {
+        "timestamp": "2024-01-01 14:15:00",
+        "energy_consumption_kWh": 0.0562982865697114,
+        "production_solaire": 0.4481971033175752
+      },
+      {
+        "timestamp": "2024-01-01 14:20:00",
+        "energy_consumption_kWh": 0.0711193846503369,
+        "production_solaire": 0.4414936574273019
+      },
+      {
+        "timestamp": "2024-01-01 14:25:00",
+        "energy_consumption_kWh": 0.0762482704963358,
+        "production_solaire": 0.4344678667004101
+      },
+      {
+        "timestamp": "2024-01-01 14:30:00",
+        "energy_consumption_kWh": 0.0707372674994617,
+        "production_solaire": 0.4271384068042397
+      },
+      {
+        "timestamp": "2024-01-01 14:35:00",
+        "energy_consumption_kWh": 0.0930609022674489,
+        "production_solaire": 0.4195245252757864
+      },
+      {
+        "timestamp": "2024-01-01 14:40:00",
+        "energy_consumption_kWh": 0.0818870503255455,
+        "production_solaire": 0.4116459577128902
+      },
+      {
+        "timestamp": "2024-01-01 14:45:00",
+        "energy_consumption_kWh": 0.1006853617312214,
+        "production_solaire": 0.403522843068943
+      },
+      {
+        "timestamp": "2024-01-01 14:50:00",
+        "energy_consumption_kWh": 0.0823007718876649,
+        "production_solaire": 0.3951756385562721
+      },
+      {
+        "timestamp": "2024-01-01 14:55:00",
+        "energy_consumption_kWh": 0.1194849792945491,
+        "production_solaire": 0.3866250346567497
+      },
+      {
+        "timestamp": "2024-01-01 15:00:00",
+        "energy_consumption_kWh": 0.1016178296369488,
+        "production_solaire": 0.3778918707278627
+      },
+      {
+        "timestamp": "2024-01-01 15:05:00",
+        "energy_consumption_kWh": 0.1122388388224205,
+        "production_solaire": 0.3689970516786128
+      },
+      {
+        "timestamp": "2024-01-01 15:10:00",
+        "energy_consumption_kWh": 0.0999898477488391,
+        "production_solaire": 0.35996146617238
+      },
+      {
+        "timestamp": "2024-01-01 15:15:00",
+        "energy_consumption_kWh": 0.1227211014940417,
+        "production_solaire": 0.3508059067935256
+      }
+    ],
+    "last_update": "2026-04-20 20:08:02"
+  },
+  "maison4@smartcas.ma": {
+    "user_email": "maison4@smartcas.ma",
+    "user_name": "Propri\u00e9taire Maison 4",
+    "household_id": 4,
+    "address": "Quartier Maarif, Casablanca - Maison 4",
+    "hourly_consumption": [
+      0.0767285025862491,
+      0.0715882974903185,
+      0.0827973095360632,
+      0.0769199021442577,
+      0.0652209157638418,
+      0.0753790571758026,
+      0.0656004798853065,
+      0.0317208378874519,
+      0.0473409257587732,
+      0.0553696342514052,
+      0.054101584447639,
+      0.0353506956742101,
+      0.0643929121364647,
+      0.0654116409519373,
+      0.0612301023362247,
+      0.0696134068800853,
+      0.1000105800817532,
+      0.0835972711572277,
+      0.1042230279328547,
+      0.0905048594074687,
+      0.0877488404628222,
+      0.0834850447694727,
+      0.1134353765371099,
+      0.0877214194501552
+    ],
+    "predictions": [
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.171,
+      0.171,
+      0.171,
+      0.171
+    ],
+    "stats": {
+      "total_consumption_today": 1.749492624704895,
+      "avg_consumption": 0.11918635284900633,
+      "peak_consumption": 0.201993065942475,
+      "min_consumption": 0.0317208378874519,
+      "total_production": 32.33382621165536,
+      "avg_flux": 0.05654096351868581,
+      "efficiency_score": 61.57664621949832
+    },
+    "historical_data": [
+      {
+        "timestamp": "2024-01-01 07:00:00",
+        "energy_consumption_kWh": 0.1640012036710123,
+        "production_solaire": 0.0402298033747662
+      },
+      {
+        "timestamp": "2024-01-01 07:05:00",
+        "energy_consumption_kWh": 0.1492766916998337,
+        "production_solaire": 0.0431258242111319
+      },
+      {
+        "timestamp": "2024-01-01 07:10:00",
+        "energy_consumption_kWh": 0.1646147659350579,
+        "production_solaire": 0.0461853964506552
+      },
+      {
+        "timestamp": "2024-01-01 07:15:00",
+        "energy_consumption_kWh": 0.1489414412127312,
+        "production_solaire": 0.0494139660807113
+      },
+      {
+        "timestamp": "2024-01-01 07:20:00",
+        "energy_consumption_kWh": 0.1301508047150353,
+        "production_solaire": 0.0528168527493853
+      },
+      {
+        "timestamp": "2024-01-01 07:25:00",
+        "energy_consumption_kWh": 0.1500622316409805,
+        "production_solaire": 0.0563992195501185
+      },
+      {
+        "timestamp": "2024-01-01 07:30:00",
+        "energy_consumption_kWh": 0.1308352898574911,
+        "production_solaire": 0.0601660414971761
+      },
+      {
+        "timestamp": "2024-01-01 07:35:00",
+        "energy_consumption_kWh": 0.1337591030486908,
+        "production_solaire": 0.0641220727917802
+      },
+      {
+        "timestamp": "2024-01-01 07:40:00",
+        "energy_consumption_kWh": 0.1118333423099026,
+        "production_solaire": 0.0682718129940611
+      },
+      {
+        "timestamp": "2024-01-01 07:45:00",
+        "energy_consumption_kWh": 0.1067211631323937,
+        "production_solaire": 0.0726194722314202
+      },
+      {
+        "timestamp": "2024-01-01 07:50:00",
+        "energy_consumption_kWh": 0.0992420679432918,
+        "production_solaire": 0.0771689355893046
+      },
+      {
+        "timestamp": "2024-01-01 07:55:00",
+        "energy_consumption_kWh": 0.0900467321146781,
+        "production_solaire": 0.0819237268456536
+      },
+      {
+        "timestamp": "2024-01-01 08:00:00",
+        "energy_consumption_kWh": 0.090280817393632,
+        "production_solaire": 0.0868869717252225
+      },
+      {
+        "timestamp": "2024-01-01 08:05:00",
+        "energy_consumption_kWh": 0.0898977025631215,
+        "production_solaire": 0.0920613608644829
+      },
+      {
+        "timestamp": "2024-01-01 08:10:00",
+        "energy_consumption_kWh": 0.083352105172348,
+        "production_solaire": 0.0974491126916623
+      },
+      {
+        "timestamp": "2024-01-01 08:15:00",
+        "energy_consumption_kWh": 0.0792280649804895,
+        "production_solaire": 0.1030519364395776
+      },
+      {
+        "timestamp": "2024-01-01 08:20:00",
+        "energy_consumption_kWh": 0.0815026332670723,
+        "production_solaire": 0.1088709955210483
+      },
+      {
+        "timestamp": "2024-01-01 08:25:00",
+        "energy_consumption_kWh": 0.0631113992145748,
+        "production_solaire": 0.1149068715077014
+      },
+      {
+        "timestamp": "2024-01-01 08:30:00",
+        "energy_consumption_kWh": 0.0704178855632594,
+        "production_solaire": 0.1211595289627194
+      },
+      {
+        "timestamp": "2024-01-01 08:35:00",
+        "energy_consumption_kWh": 0.0720578808053038,
+        "production_solaire": 0.1276282813863837
+      },
+      {
+        "timestamp": "2024-01-01 08:40:00",
+        "energy_consumption_kWh": 0.0464318036527996,
+        "production_solaire": 0.1343117585399661
+      },
+      {
+        "timestamp": "2024-01-01 08:45:00",
+        "energy_consumption_kWh": 0.0458314764940692,
+        "production_solaire": 0.1412078754184799
+      },
+      {
+        "timestamp": "2024-01-01 08:50:00",
+        "energy_consumption_kWh": 0.0652259894647801,
+        "production_solaire": 0.148313803145858
+      },
+      {
+        "timestamp": "2024-01-01 08:55:00",
+        "energy_consumption_kWh": 0.0763770674404363,
+        "production_solaire": 0.1556259420671857
+      },
+      {
+        "timestamp": "2024-01-01 09:00:00",
+        "energy_consumption_kWh": 0.0511029838670544,
+        "production_solaire": 0.1631398973115197
+      },
+      {
+        "timestamp": "2024-01-01 09:05:00",
+        "energy_consumption_kWh": 0.0455487682080539,
+        "production_solaire": 0.1708504570955114
+      },
+      {
+        "timestamp": "2024-01-01 09:10:00",
+        "energy_consumption_kWh": 0.0503236125026689,
+        "production_solaire": 0.1787515740324124
+      },
+      {
+        "timestamp": "2024-01-01 09:15:00",
+        "energy_consumption_kWh": 0.0503518229218527,
+        "production_solaire": 0.1868363497030215
+      },
+      {
+        "timestamp": "2024-01-01 09:20:00",
+        "energy_consumption_kWh": 0.0589839441802891,
+        "production_solaire": 0.1950970227346782
+      },
+      {
+        "timestamp": "2024-01-01 09:25:00",
+        "energy_consumption_kWh": 0.0529446981285995,
+        "production_solaire": 0.2035249606215198
+      },
+      {
+        "timestamp": "2024-01-01 09:30:00",
+        "energy_consumption_kWh": 0.0670482091820386,
+        "production_solaire": 0.212110655503862
+      },
+      {
+        "timestamp": "2024-01-01 09:35:00",
+        "energy_consumption_kWh": 0.0780568705783012,
+        "production_solaire": 0.2208437241067976
+      },
+      {
+        "timestamp": "2024-01-01 09:40:00",
+        "energy_consumption_kWh": 0.090943675567885,
+        "production_solaire": 0.2297129120179632
+      },
+      {
+        "timestamp": "2024-01-01 09:45:00",
+        "energy_consumption_kWh": 0.0827582328627044,
+        "production_solaire": 0.2387061024619817
+      },
+      {
+        "timestamp": "2024-01-01 09:50:00",
+        "energy_consumption_kWh": 0.0820401095528267,
+        "production_solaire": 0.2478103297044486
+      },
+      {
+        "timestamp": "2024-01-01 09:55:00",
+        "energy_consumption_kWh": 0.1026843319401745,
+        "production_solaire": 0.2570117971916338
+      },
+      {
+        "timestamp": "2024-01-01 10:00:00",
+        "energy_consumption_kWh": 0.1248874663817877,
+        "production_solaire": 0.2662959005034486
+      },
+      {
+        "timestamp": "2024-01-01 10:05:00",
+        "energy_consumption_kWh": 0.0917213466555447,
+        "production_solaire": 0.2756472551668769
+      },
+      {
+        "timestamp": "2024-01-01 10:10:00",
+        "energy_consumption_kWh": 0.1376852525489243,
+        "production_solaire": 0.285049729345198
+      },
+      {
+        "timestamp": "2024-01-01 10:15:00",
+        "energy_consumption_kWh": 0.1261886444503776,
+        "production_solaire": 0.2944864813851332
+      },
+      {
+        "timestamp": "2024-01-01 10:20:00",
+        "energy_consumption_kWh": 0.1404664017782563,
+        "production_solaire": 0.303940002169814
+      },
+      {
+        "timestamp": "2024-01-01 10:25:00",
+        "energy_consumption_kWh": 0.116904467664588,
+        "production_solaire": 0.3133921621904387
+      },
+      {
+        "timestamp": "2024-01-01 10:30:00",
+        "energy_consumption_kWh": 0.1308405195797669,
+        "production_solaire": 0.322824263213946
+      },
+      {
+        "timestamp": "2024-01-01 10:35:00",
+        "energy_consumption_kWh": 0.13605446372211,
+        "production_solaire": 0.3322170943882868
+      },
+      {
+        "timestamp": "2024-01-01 10:40:00",
+        "energy_consumption_kWh": 0.1688384012242333,
+        "production_solaire": 0.3415509925912443
+      },
+      {
+        "timestamp": "2024-01-01 10:45:00",
+        "energy_consumption_kWh": 0.1622089738444721,
+        "production_solaire": 0.3508059067935256
+      },
+      {
+        "timestamp": "2024-01-01 10:50:00",
+        "energy_consumption_kWh": 0.1698823613493894,
+        "production_solaire": 0.35996146617238
+      },
+      {
+        "timestamp": "2024-01-01 10:55:00",
+        "energy_consumption_kWh": 0.1621972588234167,
+        "production_solaire": 0.3689970516786128
+      },
+      {
+        "timestamp": "2024-01-01 11:00:00",
+        "energy_consumption_kWh": 0.1646233157699621,
+        "production_solaire": 0.3778918707278627
+      },
+      {
+        "timestamp": "2024-01-01 11:05:00",
+        "energy_consumption_kWh": 0.1640689719082693,
+        "production_solaire": 0.3866250346567497
+      },
+      {
+        "timestamp": "2024-01-01 11:10:00",
+        "energy_consumption_kWh": 0.201993065942475,
+        "production_solaire": 0.3951756385562721
+      },
+      {
+        "timestamp": "2024-01-01 11:15:00",
+        "energy_consumption_kWh": 0.1800657037509516,
+        "production_solaire": 0.403522843068943
+      },
+      {
+        "timestamp": "2024-01-01 11:20:00",
+        "energy_consumption_kWh": 0.1848899812178502,
+        "production_solaire": 0.4116459577128902
+      },
+      {
+        "timestamp": "2024-01-01 11:25:00",
+        "energy_consumption_kWh": 0.1874388009091007,
+        "production_solaire": 0.4195245252757864
+      },
+      {
+        "timestamp": "2024-01-01 11:30:00",
+        "energy_consumption_kWh": 0.1716871933310425,
+        "production_solaire": 0.4271384068042397
+      },
+      {
+        "timestamp": "2024-01-01 11:35:00",
+        "energy_consumption_kWh": 0.1845508175562038,
+        "production_solaire": 0.4344678667004101
+      },
+      {
+        "timestamp": "2024-01-01 11:40:00",
+        "energy_consumption_kWh": 0.1976955158187561,
+        "production_solaire": 0.4414936574273019
+      },
+      {
+        "timestamp": "2024-01-01 11:45:00",
+        "energy_consumption_kWh": 0.1773604623657271,
+        "production_solaire": 0.4481971033175752
+      },
+      {
+        "timestamp": "2024-01-01 11:50:00",
+        "energy_consumption_kWh": 0.1678789742073447,
+        "production_solaire": 0.4545601829779538
+      },
+      {
+        "timestamp": "2024-01-01 11:55:00",
+        "energy_consumption_kWh": 0.1462151420646239,
+        "production_solaire": 0.4605656097824748
+      },
+      {
+        "timestamp": "2024-01-01 12:00:00",
+        "energy_consumption_kWh": 0.1425328573535209,
+        "production_solaire": 0.4661969099529741
+      },
+      {
+        "timestamp": "2024-01-01 12:05:00",
+        "energy_consumption_kWh": 0.1714141165065603,
+        "production_solaire": 0.4714384977343608
+      },
+      {
+        "timestamp": "2024-01-01 12:10:00",
+        "energy_consumption_kWh": 0.1731134781372852,
+        "production_solaire": 0.4762757471853697
+      },
+      {
+        "timestamp": "2024-01-01 12:15:00",
+        "energy_consumption_kWh": 0.1658078615313223,
+        "production_solaire": 0.4806950601225407
+      },
+      {
+        "timestamp": "2024-01-01 12:20:00",
+        "energy_consumption_kWh": 0.1531393958042607,
+        "production_solaire": 0.4846839297760509
+      },
+      {
+        "timestamp": "2024-01-01 12:25:00",
+        "energy_consumption_kWh": 0.1457126320235883,
+        "production_solaire": 0.4882309997405905
+      },
+      {
+        "timestamp": "2024-01-01 12:30:00",
+        "energy_consumption_kWh": 0.1582947828688997,
+        "production_solaire": 0.4913261178325366
+      },
+      {
+        "timestamp": "2024-01-01 12:35:00",
+        "energy_consumption_kWh": 0.1263211494844928,
+        "production_solaire": 0.4939603844960413
+      },
+      {
+        "timestamp": "2024-01-01 12:40:00",
+        "energy_consumption_kWh": 0.128244907949276,
+        "production_solaire": 0.4961261954350603
+      },
+      {
+        "timestamp": "2024-01-01 12:45:00",
+        "energy_consumption_kWh": 0.1186378384077943,
+        "production_solaire": 0.497817278185523
+      },
+      {
+        "timestamp": "2024-01-01 12:50:00",
+        "energy_consumption_kWh": 0.1432559521528802,
+        "production_solaire": 0.4990287223814848
+      },
+      {
+        "timestamp": "2024-01-01 12:55:00",
+        "energy_consumption_kWh": 0.1183263541223088,
+        "production_solaire": 0.4997570035108762
+      },
+      {
+        "timestamp": "2024-01-01 13:00:00",
+        "energy_consumption_kWh": 0.1122335439778575,
+        "production_solaire": 0.5
+      },
+      {
+        "timestamp": "2024-01-01 13:05:00",
+        "energy_consumption_kWh": 0.0995014355657486,
+        "production_solaire": 0.4997570035108762
+      },
+      {
+        "timestamp": "2024-01-01 13:10:00",
+        "energy_consumption_kWh": 0.0974929311206619,
+        "production_solaire": 0.4990287223814848
+      },
+      {
+        "timestamp": "2024-01-01 13:15:00",
+        "energy_consumption_kWh": 0.089902052104333,
+        "production_solaire": 0.497817278185523
+      },
+      {
+        "timestamp": "2024-01-01 13:20:00",
+        "energy_consumption_kWh": 0.0767285025862491,
+        "production_solaire": 0.4961261954350603
+      },
+      {
+        "timestamp": "2024-01-01 13:25:00",
+        "energy_consumption_kWh": 0.0715882974903185,
+        "production_solaire": 0.4939603844960413
+      },
+      {
+        "timestamp": "2024-01-01 13:30:00",
+        "energy_consumption_kWh": 0.0827973095360632,
+        "production_solaire": 0.4913261178325366
+      },
+      {
+        "timestamp": "2024-01-01 13:35:00",
+        "energy_consumption_kWh": 0.0769199021442577,
+        "production_solaire": 0.4882309997405905
+      },
+      {
+        "timestamp": "2024-01-01 13:40:00",
+        "energy_consumption_kWh": 0.0652209157638418,
+        "production_solaire": 0.4846839297760509
+      },
+      {
+        "timestamp": "2024-01-01 13:45:00",
+        "energy_consumption_kWh": 0.0753790571758026,
+        "production_solaire": 0.4806950601225407
+      },
+      {
+        "timestamp": "2024-01-01 13:50:00",
+        "energy_consumption_kWh": 0.0656004798853065,
+        "production_solaire": 0.4762757471853697
+      },
+      {
+        "timestamp": "2024-01-01 13:55:00",
+        "energy_consumption_kWh": 0.0317208378874519,
+        "production_solaire": 0.4714384977343608
+      },
+      {
+        "timestamp": "2024-01-01 14:00:00",
+        "energy_consumption_kWh": 0.0473409257587732,
+        "production_solaire": 0.4661969099529741
+      },
+      {
+        "timestamp": "2024-01-01 14:05:00",
+        "energy_consumption_kWh": 0.0553696342514052,
+        "production_solaire": 0.4605656097824748
+      },
+      {
+        "timestamp": "2024-01-01 14:10:00",
+        "energy_consumption_kWh": 0.054101584447639,
+        "production_solaire": 0.4545601829779538
+      },
+      {
+        "timestamp": "2024-01-01 14:15:00",
+        "energy_consumption_kWh": 0.0353506956742101,
+        "production_solaire": 0.4481971033175752
+      },
+      {
+        "timestamp": "2024-01-01 14:20:00",
+        "energy_consumption_kWh": 0.0643929121364647,
+        "production_solaire": 0.4414936574273019
+      },
+      {
+        "timestamp": "2024-01-01 14:25:00",
+        "energy_consumption_kWh": 0.0654116409519373,
+        "production_solaire": 0.4344678667004101
+      },
+      {
+        "timestamp": "2024-01-01 14:30:00",
+        "energy_consumption_kWh": 0.0612301023362247,
+        "production_solaire": 0.4271384068042397
+      },
+      {
+        "timestamp": "2024-01-01 14:35:00",
+        "energy_consumption_kWh": 0.0696134068800853,
+        "production_solaire": 0.4195245252757864
+      },
+      {
+        "timestamp": "2024-01-01 14:40:00",
+        "energy_consumption_kWh": 0.1000105800817532,
+        "production_solaire": 0.4116459577128902
+      },
+      {
+        "timestamp": "2024-01-01 14:45:00",
+        "energy_consumption_kWh": 0.0835972711572277,
+        "production_solaire": 0.403522843068943
+      },
+      {
+        "timestamp": "2024-01-01 14:50:00",
+        "energy_consumption_kWh": 0.1042230279328547,
+        "production_solaire": 0.3951756385562721
+      },
+      {
+        "timestamp": "2024-01-01 14:55:00",
+        "energy_consumption_kWh": 0.0905048594074687,
+        "production_solaire": 0.3866250346567497
+      },
+      {
+        "timestamp": "2024-01-01 15:00:00",
+        "energy_consumption_kWh": 0.0877488404628222,
+        "production_solaire": 0.3778918707278627
+      },
+      {
+        "timestamp": "2024-01-01 15:05:00",
+        "energy_consumption_kWh": 0.0834850447694727,
+        "production_solaire": 0.3689970516786128
+      },
+      {
+        "timestamp": "2024-01-01 15:10:00",
+        "energy_consumption_kWh": 0.1134353765371099,
+        "production_solaire": 0.35996146617238
+      },
+      {
+        "timestamp": "2024-01-01 15:15:00",
+        "energy_consumption_kWh": 0.0877214194501552,
+        "production_solaire": 0.3508059067935256
+      }
+    ],
+    "last_update": "2026-04-20 20:08:03"
+  },
+  "maison5@smartcas.ma": {
+    "user_email": "maison5@smartcas.ma",
+    "user_name": "Propri\u00e9taire Maison 5",
+    "household_id": 5,
+    "address": "Quartier Maarif, Casablanca - Maison 5",
+    "hourly_consumption": [
+      0.1425407786580853,
+      0.1347129235064985,
+      0.1027754427761662,
+      0.0702232516213076,
+      0.1133378991614264,
+      0.1201524921652689,
+      0.086780435523961,
+      0.1107521495921215,
+      0.1164970269730736,
+      0.1133549389962242,
+      0.0985215423108464,
+      0.1143745983680903,
+      0.1227192600432333,
+      0.0870485607283521,
+      0.1163143701443669,
+      0.1382905446542701,
+      0.1261130211399161,
+      0.105020191027671,
+      0.1731292059063395,
+      0.1689541079894513,
+      0.1596662165118979,
+      0.221986395637892,
+      0.2037779163076046,
+      0.1808871126437075
+    ],
+    "predictions": [
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.196,
+      0.171,
+      0.171,
+      0.171,
+      0.171,
+      0.171
+    ],
+    "stats": {
+      "total_consumption_today": 3.127930382387772,
+      "avg_consumption": 0.20126727231165453,
+      "peak_consumption": 0.3352181726100653,
+      "min_consumption": 0.0668911401543857,
+      "total_production": 0.0,
+      "avg_flux": NaN,
+      "efficiency_score": 63.29033926145373
+    },
+    "historical_data": [
+      {
+        "timestamp": "2024-01-01 07:05:00",
+        "energy_consumption_kWh": 0.3039409797407064,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 07:10:00",
+        "energy_consumption_kWh": 0.282183583258918,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 07:15:00",
+        "energy_consumption_kWh": 0.2587822301680206,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 07:20:00",
+        "energy_consumption_kWh": 0.2684727442459987,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 07:25:00",
+        "energy_consumption_kWh": 0.2181433078173089,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 07:30:00",
+        "energy_consumption_kWh": 0.2341104386153724,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 07:35:00",
+        "energy_consumption_kWh": 0.2158653719194975,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 07:40:00",
+        "energy_consumption_kWh": 0.249629124515318,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 07:45:00",
+        "energy_consumption_kWh": 0.1769882986361966,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 07:50:00",
+        "energy_consumption_kWh": 0.1702301967776737,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 07:55:00",
+        "energy_consumption_kWh": 0.1727387357800768,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:00:00",
+        "energy_consumption_kWh": 0.1735566283695954,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:05:00",
+        "energy_consumption_kWh": 0.1883567926664154,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:10:00",
+        "energy_consumption_kWh": 0.1443070820075035,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:15:00",
+        "energy_consumption_kWh": 0.119759410354745,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:20:00",
+        "energy_consumption_kWh": 0.106123944869956,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:25:00",
+        "energy_consumption_kWh": 0.095989642994924,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:30:00",
+        "energy_consumption_kWh": 0.1213790480768653,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:35:00",
+        "energy_consumption_kWh": 0.1367506741915987,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:40:00",
+        "energy_consumption_kWh": 0.1271577218670211,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:45:00",
+        "energy_consumption_kWh": 0.0846151597338721,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:50:00",
+        "energy_consumption_kWh": 0.1046582796266701,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 08:55:00",
+        "energy_consumption_kWh": 0.0668911401543857,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:00:00",
+        "energy_consumption_kWh": 0.1023574828527364,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:05:00",
+        "energy_consumption_kWh": 0.1002480052759197,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:10:00",
+        "energy_consumption_kWh": 0.0876480447087708,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:15:00",
+        "energy_consumption_kWh": 0.1075936750534057,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:20:00",
+        "energy_consumption_kWh": 0.1150987969960223,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:25:00",
+        "energy_consumption_kWh": 0.1133853871130336,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:30:00",
+        "energy_consumption_kWh": 0.1183634859309973,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:35:00",
+        "energy_consumption_kWh": 0.1115668138745074,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:40:00",
+        "energy_consumption_kWh": 0.1680044525822945,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:45:00",
+        "energy_consumption_kWh": 0.1655410133274195,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:50:00",
+        "energy_consumption_kWh": 0.1514106232653293,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 09:55:00",
+        "energy_consumption_kWh": 0.1663512669402247,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:00:00",
+        "energy_consumption_kWh": 0.1572116552710235,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:05:00",
+        "energy_consumption_kWh": 0.1880684579302269,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:10:00",
+        "energy_consumption_kWh": 0.247926091849766,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:15:00",
+        "energy_consumption_kWh": 0.1750385390293521,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:20:00",
+        "energy_consumption_kWh": 0.16657069069447,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:25:00",
+        "energy_consumption_kWh": 0.1960069984274848,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:30:00",
+        "energy_consumption_kWh": 0.2288971475789799,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:35:00",
+        "energy_consumption_kWh": 0.2344071438141461,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:40:00",
+        "energy_consumption_kWh": 0.2447316404420735,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:45:00",
+        "energy_consumption_kWh": 0.285911934079726,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:50:00",
+        "energy_consumption_kWh": 0.2848353997202288,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 10:55:00",
+        "energy_consumption_kWh": 0.2731914247298858,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:00:00",
+        "energy_consumption_kWh": 0.2847654240182998,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:05:00",
+        "energy_consumption_kWh": 0.2600057123762635,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:10:00",
+        "energy_consumption_kWh": 0.2680275554499398,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:15:00",
+        "energy_consumption_kWh": 0.2963004225473868,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:20:00",
+        "energy_consumption_kWh": 0.2542283306887242,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:25:00",
+        "energy_consumption_kWh": 0.2487183436667138,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:30:00",
+        "energy_consumption_kWh": 0.3208190056857662,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:35:00",
+        "energy_consumption_kWh": 0.28488147510133,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:40:00",
+        "energy_consumption_kWh": 0.3352181726100653,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:45:00",
+        "energy_consumption_kWh": 0.2635176208037875,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:50:00",
+        "energy_consumption_kWh": 0.3024845547459469,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 11:55:00",
+        "energy_consumption_kWh": 0.2794273931637557,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:00:00",
+        "energy_consumption_kWh": 0.305274026992915,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:05:00",
+        "energy_consumption_kWh": 0.2918651413901863,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:10:00",
+        "energy_consumption_kWh": 0.2578604874763558,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:15:00",
+        "energy_consumption_kWh": 0.2825113521920259,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:20:00",
+        "energy_consumption_kWh": 0.2756907483871486,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:25:00",
+        "energy_consumption_kWh": 0.275544128486858,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:30:00",
+        "energy_consumption_kWh": 0.2425316326781724,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:35:00",
+        "energy_consumption_kWh": 0.2487321468755805,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:40:00",
+        "energy_consumption_kWh": 0.2256425204179766,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:45:00",
+        "energy_consumption_kWh": 0.2308671898105582,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:50:00",
+        "energy_consumption_kWh": 0.1895679629394678,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 12:55:00",
+        "energy_consumption_kWh": 0.1862795439365432,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:00:00",
+        "energy_consumption_kWh": 0.1737192543348667,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:05:00",
+        "energy_consumption_kWh": 0.1536066426800789,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:10:00",
+        "energy_consumption_kWh": 0.1477157975747464,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:15:00",
+        "energy_consumption_kWh": 0.1191744282132806,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:20:00",
+        "energy_consumption_kWh": 0.1286193215452726,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:25:00",
+        "energy_consumption_kWh": 0.1425407786580853,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:30:00",
+        "energy_consumption_kWh": 0.1347129235064985,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:35:00",
+        "energy_consumption_kWh": 0.1027754427761662,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:40:00",
+        "energy_consumption_kWh": 0.0702232516213076,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:45:00",
+        "energy_consumption_kWh": 0.1133378991614264,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:50:00",
+        "energy_consumption_kWh": 0.1201524921652689,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 13:55:00",
+        "energy_consumption_kWh": 0.086780435523961,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:00:00",
+        "energy_consumption_kWh": 0.1107521495921215,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:05:00",
+        "energy_consumption_kWh": 0.1164970269730736,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:10:00",
+        "energy_consumption_kWh": 0.1133549389962242,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:15:00",
+        "energy_consumption_kWh": 0.0985215423108464,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:20:00",
+        "energy_consumption_kWh": 0.1143745983680903,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:25:00",
+        "energy_consumption_kWh": 0.1227192600432333,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:30:00",
+        "energy_consumption_kWh": 0.0870485607283521,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:35:00",
+        "energy_consumption_kWh": 0.1163143701443669,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:40:00",
+        "energy_consumption_kWh": 0.1382905446542701,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:45:00",
+        "energy_consumption_kWh": 0.1261130211399161,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:50:00",
+        "energy_consumption_kWh": 0.105020191027671,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 14:55:00",
+        "energy_consumption_kWh": 0.1731292059063395,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 15:00:00",
+        "energy_consumption_kWh": 0.1689541079894513,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 15:05:00",
+        "energy_consumption_kWh": 0.1596662165118979,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 15:10:00",
+        "energy_consumption_kWh": 0.221986395637892,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 15:15:00",
+        "energy_consumption_kWh": 0.2037779163076046,
+        "production_solaire": NaN
+      },
+      {
+        "timestamp": "2024-01-01 15:20:00",
+        "energy_consumption_kWh": 0.1808871126437075,
+        "production_solaire": NaN
+      }
+    ],
+    "last_update": "2026-04-20 20:08:04"
+  }
+}
