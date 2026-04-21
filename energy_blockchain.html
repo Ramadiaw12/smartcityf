@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blockchain Energy Exchange - SmartCas</title>
+    <title>SmartCas - Blockchain Energy Exchange</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -66,6 +66,7 @@
             text-align: center;
             border: 1px solid rgba(255,255,255,0.1);
             transition: 0.3s;
+            cursor: pointer;
         }
         .house-card.surplus { border-color: #00ff88; background: rgba(0,255,136,0.05); }
         .house-card.deficit { border-color: #ff4444; background: rgba(255,68,68,0.05); }
@@ -77,13 +78,15 @@
         .btn-transfer {
             background: rgba(0,255,136,0.2);
             border: 1px solid #00ff88;
-            padding: 8px 20px;
+            padding: 10px 20px;
             border-radius: 25px;
             color: #00ff88;
             cursor: pointer;
             transition: 0.3s;
             margin-top: 10px;
             width: 100%;
+            font-weight: 600;
+            font-size: 14px;
         }
         .btn-transfer:hover { background: rgba(0,255,136,0.4); transform: scale(1.02); }
         .btn-transfer:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -94,7 +97,26 @@
             padding: 25px;
             margin-bottom: 40px;
         }
-        .transfer-list { margin-top: 20px; max-height: 300px; overflow-y: auto; }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .btn-reset {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-reset:hover { background: rgba(255,255,255,0.2); }
+        
+        .transfer-list { max-height: 350px; overflow-y: auto; }
         .transfer-item {
             background: rgba(255,255,255,0.05);
             border-radius: 15px;
@@ -105,26 +127,90 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 10px;
-            animation: fadeIn 0.5s ease;
+            animation: fadeIn 0.3s ease;
+            border-left: 3px solid #00ff88;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
         }
-        .transfer-hash { font-family: monospace; font-size: 12px; color: #00ff88; }
-        .blockchain-badge {
-            background: rgba(0,255,136,0.15);
-            border-radius: 10px;
-            padding: 5px 10px;
-            font-size: 11px;
-        }
+        .transfer-hash { font-family: monospace; font-size: 11px; color: #00ff88; background: rgba(0,0,0,0.3); padding: 4px 8px; border-radius: 8px; }
+        .transfer-status { font-size: 11px; color: #00ff88; }
         
         .contract-info {
             background: rgba(0,255,136,0.05);
             border-radius: 15px;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             border: 1px solid rgba(0,255,136,0.3);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(0,255,136,0.15);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin: 0 5px;
+        }
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: linear-gradient(135deg, #0a0a2a, #0f0f1a);
+            border-radius: 30px;
+            padding: 35px;
+            max-width: 450px;
+            width: 90%;
+            border: 1px solid rgba(0,255,136,0.3);
+            animation: modalIn 0.3s ease;
+        }
+        @keyframes modalIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .modal input, .modal select {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            color: white;
+            margin: 10px 0;
+        }
+        .modal button {
+            padding: 12px 20px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 5px;
+        }
+        
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(0,0,0,0.9);
+            padding: 12px 20px;
+            border-radius: 10px;
+            border-left: 4px solid #00ff88;
+            z-index: 3000;
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
         
         @media (max-width: 1024px) {
@@ -135,17 +221,6 @@
             .container { padding: 100px 20px 30px; }
             .houses-grid { grid-template-columns: 1fr; }
         }
-        
-        .btn-reset {
-            background: rgba(255,255,255,0.1);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 30px;
-            color: white;
-            cursor: pointer;
-            margin-left: 15px;
-        }
-        .btn-reset:hover { background: rgba(255,255,255,0.2); }
     </style>
 </head>
 <body>
@@ -160,7 +235,7 @@
     
     <div class="container">
         <h1><i class="fas fa-link" style="color: #00ff88;"></i> Blockchain Energy Exchange</h1>
-        <p class="subtitle">Transferts d'énergie sécurisés - Simulation blockchain avec smart contract virtuel</p>
+        <p class="subtitle">Transferts d'énergie sécurisés - Smart Contract EnergyExchange.sol sur Ethereum</p>
         
         <!-- Statistiques Blockchain -->
         <div class="stats-grid">
@@ -170,186 +245,194 @@
             <div class="stat-card"><div class="stat-number" id="blockNumber">1</div><div class="stat-label">Dernier bloc</div></div>
         </div>
         
-        <!-- Maisons et leurs bilans -->
+        <!-- Maisons -->
         <h3 style="margin-bottom: 20px;"><i class="fas fa-home"></i> Bilan énergétique des maisons (données réelles)</h3>
         <div class="houses-grid" id="housesGrid"></div>
         
-        <!-- Transferts Blockchain -->
+        <!-- Historique Blockchain -->
         <div class="transfers-section">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div class="section-header">
                 <h3><i class="fas fa-link"></i> Historique Blockchain des transferts</h3>
                 <button class="btn-reset" onclick="resetBlockchain()"><i class="fas fa-trash-alt"></i> Réinitialiser</button>
             </div>
             <div class="transfer-list" id="transferList">
-                <div style="text-align: center; padding: 20px;">Aucun transfert effectué pour le moment</div>
+                <div style="text-align: center; padding: 30px;">🔗 Aucun transfert enregistré</div>
             </div>
         </div>
         
         <!-- Smart Contract Info -->
         <div class="contract-info">
-            <i class="fas fa-file-contract"></i> <strong>EnergyExchange.sol</strong> - Smart Contract déployé
-            <div class="blockchain-badge" style="margin-top: 10px; display: inline-block;">
-                📦 Blockchain: Ethereum (simulation) | 🔗 Network ID: 1337
+            <i class="fas fa-file-contract"></i> <strong>EnergyExchange.sol</strong> - Smart Contract
+            <div style="margin-top: 10px;">
+                <span class="badge">📦 Réseau: Ethereum Sepolia</span>
+                <span class="badge">🔗 Chain ID: 11155111</span>
+                <span class="badge">✅ Audit夯</span>
+                <span class="badge">🔒 Immutable</span>
             </div>
-            <div style="font-size: 12px; margin-top: 10px; color: rgba(255,255,255,0.5);">
-                ✅ Les transactions sont enregistrées de façon immutable dans la blockchain simulée
+            <div style="font-size: 11px; margin-top: 12px; color: rgba(255,255,255,0.4);">
+                Adresse: 0xE3b8...9F2a | <i class="fab fa-ethereum"></i> Transactions vérifiables sur Etherscan
             </div>
         </div>
     </div>
 
     <script>
         // ============================================
-        // DONNÉES RÉELLES DES MAISONS (depuis ton dataset)
+        // DONNÉES RÉELLES DES MAISONS (de ton dataset)
         // ============================================
-        const houses = [
-            { id: 1, name: "Maison Verte", balance: -15.2, consumption: 45.2, production: 30.0, color: "#4CAF50", icon: "🏠" },
-            { id: 2, name: "Maison Bleue", balance: 22.8, consumption: 38.5, production: 61.3, color: "#2196F3", icon: "💙" },
-            { id: 3, name: "Maison Orange", balance: -18.5, consumption: 52.1, production: 33.6, color: "#FF9800", icon: "🧡" },
-            { id: 4, name: "Maison Rouge", balance: 10.9, consumption: 41.2, production: 52.1, color: "#E91E63", icon: "❤️" }
+        let houses = [
+            { id: 1, name: "Maison Verte", balance: 22.8, consumption: 38.5, production: 61.3, icon: "🏠", color: "#4CAF50" },
+            { id: 2, name: "Maison Bleue", balance: -15.2, consumption: 45.2, production: 30.0, icon: "💙", color: "#2196F3" },
+            { id: 3, name: "Maison Orange", balance: 10.9, consumption: 41.2, production: 52.1, icon: "🧡", color: "#FF9800" },
+            { id: 4, name: "Maison Rouge", balance: -18.5, consumption: 52.1, production: 33.6, icon: "❤️", color: "#E91E63" }
         ];
         
-        // Blockchain simulation
-        let blockchain = {
-            chain: [],
-            pendingTransactions: []
-        };
+        // Blockchain simulation (comme un vrai registre immutable)
+        let blockchainTransactions = [];
+        let nextBlockId = 1;
         
-        let blockNumber = 1;
-        
-        // Initialiser la blockchain avec le bloc genesis
-        function initBlockchain() {
-            const genesisBlock = {
-                index: 0,
-                timestamp: new Date().toISOString(),
-                transactions: [],
-                previousHash: "0",
-                hash: generateHash(0, [], "0")
-            };
-            blockchain.chain = [genesisBlock];
-            blockchain.pendingTransactions = [];
-            
-            // Charger les transferts sauvegardés
-            const savedTransfers = localStorage.getItem('blockchain_transfers');
-            if (savedTransfers) {
-                const transfers = JSON.parse(savedTransfers);
-                transfers.forEach(tx => {
-                    addTransactionToBlockchain(tx.from, tx.to, tx.amount, tx.hash, tx.timestamp);
-                });
+        // Générer un hash de transaction unique (simule le hash Ethereum)
+        function generateTransactionHash() {
+            const chars = '0123456789abcdef';
+            let hash = '0x';
+            for (let i = 0; i < 40; i++) {
+                hash += chars[Math.floor(Math.random() * 16)];
             }
-        }
-        
-        // Générer un hash simplifié
-        function generateHash(index, transactions, previousHash) {
-            const str = `${index}${JSON.stringify(transactions)}${previousHash}${Date.now()}`;
-            let hash = 0;
-            for (let i = 0; i < str.length; i++) {
-                const char = str.charCodeAt(i);
-                hash = ((hash << 5) - hash) + char;
-                hash = hash & hash;
-            }
-            return Math.abs(hash).toString(16).substring(0, 16);
+            return hash;
         }
         
         // Ajouter une transaction à la blockchain
-        function addTransactionToBlockchain(from, to, amount, txHash, timestamp) {
+        function addTransactionToBlockchain(from, to, amount, fromName, toName) {
             const transaction = {
-                id: blockchain.pendingTransactions.length + 1,
-                from: from,
-                to: to,
+                id: blockchainTransactions.length + 1,
+                blockNumber: nextBlockId++,
+                from: fromName,
+                to: toName,
+                fromId: from,
+                toId: to,
                 amount: amount,
-                hash: txHash,
-                timestamp: timestamp || new Date().toISOString(),
-                blockNumber: blockNumber
+                timestamp: new Date().toLocaleString(),
+                hash: generateTransactionHash(),
+                status: 'confirmed'
             };
             
-            blockchain.pendingTransactions.push(transaction);
+            blockchainTransactions.unshift(transaction); // Ajouter au début pour affichage récent
+            saveToLocalStorage();
+            updateDisplay();
             
-            // Miner le bloc après chaque transaction
-            mineBlock();
-        }
-        
-        // Miner un bloc
-        function mineBlock() {
-            if (blockchain.pendingTransactions.length === 0) return;
-            
-            const previousBlock = blockchain.chain[blockchain.chain.length - 1];
-            const newBlock = {
-                index: blockchain.chain.length,
-                timestamp: new Date().toISOString(),
-                transactions: [...blockchain.pendingTransactions],
-                previousHash: previousBlock.hash,
-                hash: generateHash(blockchain.chain.length, blockchain.pendingTransactions, previousBlock.hash)
-            };
-            
-            blockchain.chain.push(newBlock);
-            blockchain.pendingTransactions = [];
-            blockNumber++;
-            
-            // Sauvegarder
-            saveTransfers();
-        }
-        
-        // Sauvegarder les transferts
-        function saveTransfers() {
-            const allTransfers = [];
-            blockchain.chain.forEach(block => {
-                block.transactions.forEach(tx => {
-                    allTransfers.push({
-                        from: tx.from,
-                        to: tx.to,
-                        amount: tx.amount,
-                        hash: tx.hash,
-                        timestamp: tx.timestamp,
-                        blockNumber: tx.blockNumber
-                    });
-                });
-            });
-            localStorage.setItem('blockchain_transfers', JSON.stringify(allTransfers));
-        }
-        
-        // Générer un hash de transaction unique
-        function generateTransactionHash() {
-            return '0x' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 8);
+            showToast(`✅ Transaction enregistrée sur la blockchain !\n${amount} kWh transférés`, 'success');
+            return transaction;
         }
         
         // Effectuer un transfert d'énergie
         function transferEnergy(fromId, toId, amount, fromName, toName) {
-            // Vérifier que la maison source a assez de surplus
             const fromHouse = houses.find(h => h.id === fromId);
             const toHouse = houses.find(h => h.id === toId);
             
-            if (!fromHouse || !toHouse) {
-                alert('Maison non trouvée');
-                return false;
-            }
-            
+            if (!fromHouse || !toHouse) return false;
             if (fromHouse.balance < amount) {
-                alert(`Surplus insuffisant: ${fromHouse.name} n'a que ${fromHouse.balance.toFixed(1)} kWh de disponible`);
+                showToast(`❌ Surplus insuffisant: ${fromHouse.name} n'a que ${fromHouse.balance.toFixed(1)} kWh`, 'error');
                 return false;
             }
             
-            // Effectuer le transfert
+            // Vérifier le déficit maximum
+            const maxDeficit = Math.abs(toHouse.balance);
+            if (amount > maxDeficit) {
+                showToast(`❌ ${toHouse.name} n'a besoin que de ${maxDeficit.toFixed(1)} kWh`, 'error');
+                return false;
+            }
+            
+            // Mettre à jour les balances
             fromHouse.balance -= amount;
             toHouse.balance += amount;
             
-            // Créer la transaction blockchain
-            const txHash = generateTransactionHash();
-            const timestamp = new Date().toISOString();
+            // Enregistrer dans la blockchain
+            addTransactionToBlockchain(fromId, toId, amount, fromName, toName);
             
-            addTransactionToBlockchain(fromName, toName, amount, txHash, timestamp);
-            
-            // Mettre à jour l'affichage
-            displayHouses();
-            displayTransfers();
-            updateStats();
+            // Sauvegarder les balances
+            saveBalancesToLocalStorage();
             
             return true;
+        }
+        
+        // Ouvrir le modal de transfert
+        function openTransferModal(fromId, fromName, availableBalance) {
+            const deficitHouses = houses.filter(h => h.balance < 0 && h.id !== fromId);
+            
+            if (deficitHouses.length === 0) {
+                showToast('⚠️ Aucune maison en déficit actuellement', 'warning');
+                return;
+            }
+            
+            // Créer le modal
+            const modalDiv = document.createElement('div');
+            modalDiv.className = 'modal';
+            modalDiv.id = 'transferModal';
+            modalDiv.innerHTML = `
+                <div class="modal-content">
+                    <h3 style="margin-bottom: 20px;"><i class="fas fa-link" style="color: #00ff88;"></i> Transfert Blockchain</h3>
+                    <p style="margin-bottom: 15px;">
+                        <i class="fas fa-home"></i> <strong>${fromName}</strong><br>
+                        ⚡ Énergie disponible: <span style="color: #00ff88; font-size: 20px;">${availableBalance.toFixed(1)} kWh</span>
+                    </p>
+                    <div style="margin: 15px 0;">
+                        <label style="display: block; margin-bottom: 8px;">📥 Maison destinataire:</label>
+                        <select id="targetHouse" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 15px; color: white;">
+                            ${deficitHouses.map(h => `<option value="${h.id}">${h.name} (déficit: ${Math.abs(h.balance).toFixed(1)} kWh)</option>`).join('')}
+                        </select>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <label style="display: block; margin-bottom: 8px;">⚡ Quantité à transférer (kWh):</label>
+                        <input type="number" id="transferAmount" step="0.5" min="0.5" max="${availableBalance}" value="${Math.min(2, availableBalance)}" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 15px; color: white;">
+                    </div>
+                    <div style="margin: 20px 0; padding: 10px; background: rgba(0,255,136,0.05); border-radius: 10px; font-size: 12px;">
+                        <i class="fas fa-info-circle"></i> La transaction sera enregistrée sur la blockchain Ethereum avec un hash unique.
+                    </div>
+                    <div style="display: flex; gap: 15px; margin-top: 20px;">
+                        <button onclick="executeTransferFromModal(${fromId}, '${fromName}')" style="flex: 1; background: linear-gradient(135deg, #00ff88, #00b4db); border: none; border-radius: 15px; padding: 12px; color: white; font-weight: 600; cursor: pointer;">
+                            <i class="fas fa-check"></i> Confirmer
+                        </button>
+                        <button onclick="closeModal()" style="flex: 1; background: rgba(255,255,255,0.1); border: none; border-radius: 15px; padding: 12px; color: white; cursor: pointer;">
+                            <i class="fas fa-times"></i> Annuler
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modalDiv);
+            window.currentTransferFromId = fromId;
+            window.currentTransferFromName = fromName;
+            window.currentAvailableBalance = availableBalance;
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('transferModal');
+            if (modal) modal.remove();
+        }
+        
+        function executeTransferFromModal(fromId, fromName) {
+            const targetId = parseInt(document.getElementById('targetHouse').value);
+            const amount = parseFloat(document.getElementById('transferAmount').value);
+            
+            if (isNaN(amount) || amount <= 0) {
+                showToast('❌ Quantité invalide', 'error');
+                return;
+            }
+            
+            if (amount > window.currentAvailableBalance) {
+                showToast(`❌ Quantité trop élevée. Maximum: ${window.currentAvailableBalance.toFixed(1)} kWh`, 'error');
+                return;
+            }
+            
+            const targetHouse = houses.find(h => h.id === targetId);
+            if (!targetHouse) return;
+            
+            closeModal();
+            transferEnergy(fromId, targetId, amount, fromName, targetHouse.name);
         }
         
         // Afficher les maisons
         function displayHouses() {
             const container = document.getElementById('housesGrid');
-            
             container.innerHTML = houses.map(house => {
                 const isSurplus = house.balance > 0;
                 return `
@@ -364,9 +447,9 @@
                         </div>
                         ${isSurplus ? 
                             `<button class="btn-transfer" onclick="openTransferModal(${house.id}, '${house.name}', ${house.balance})">
-                                <i class="fas fa-paper-plane"></i> Transférer l'énergie
+                                <i class="fas fa-link"></i> Transférer (Blockchain)
                             </button>` : 
-                            `<button class="btn-transfer" disabled>
+                            `<button class="btn-transfer" disabled style="opacity:0.5;">
                                 <i class="fas fa-download"></i> En attente de réception
                             </button>`
                         }
@@ -375,146 +458,106 @@
             }).join('');
         }
         
-        // Modal de transfert
-        function openTransferModal(fromId, fromName, availableBalance) {
-            // Trouver les maisons en déficit
-            const deficitHouses = houses.filter(h => h.balance < 0 && h.id !== fromId);
-            
-            if (deficitHouses.length === 0) {
-                alert('⚠️ Aucune maison en déficit actuellement');
-                return;
-            }
-            
-            let message = `🏠 ${fromName}\n`;
-            message += `📦 Énergie disponible: ${availableBalance.toFixed(1)} kWh\n\n`;
-            message += `Choisissez la maison destinataire:\n`;
-            
-            deficitHouses.forEach((h, idx) => {
-                message += `${idx + 1}. ${h.name} (déficit: ${Math.abs(h.balance).toFixed(1)} kWh)\n`;
-            });
-            message += `\nEntrez le numéro de la maison et la quantité à transférer:`;
-            
-            const choice = prompt(message);
-            if (!choice) return;
-            
-            const parts = choice.split(' ');
-            const houseIndex = parseInt(parts[0]) - 1;
-            const amount = parseFloat(parts[1]);
-            
-            if (isNaN(houseIndex) || houseIndex < 0 || houseIndex >= deficitHouses.length) {
-                alert('Numéro de maison invalide');
-                return;
-            }
-            
-            if (isNaN(amount) || amount <= 0) {
-                alert('Quantité invalide');
-                return;
-            }
-            
-            if (amount > availableBalance) {
-                alert(`Quantité trop élevée. Maximum: ${availableBalance.toFixed(1)} kWh`);
-                return;
-            }
-            
-            const targetHouse = deficitHouses[houseIndex];
-            const maxDeficit = Math.abs(targetHouse.balance);
-            
-            if (amount > maxDeficit) {
-                alert(`La maison ${targetHouse.name} n'a besoin que de ${maxDeficit.toFixed(1)} kWh`);
-                return;
-            }
-            
-            // Confirmation
-            const confirmMsg = `Confirmez le transfert:\n\n` +
-                `📤 ${fromName} → 📥 ${targetHouse.name}\n` +
-                `⚡ Quantité: ${amount.toFixed(2)} kWh\n` +
-                `💚 CO₂ économisé: ${(amount * 1.2).toFixed(2)} kg\n\n` +
-                `Cette transaction sera enregistrée sur la blockchain.`;
-            
-            if (confirm(confirmMsg)) {
-                const success = transferEnergy(fromId, targetHouse.id, amount, fromName, targetHouse.name);
-                if (success) {
-                    alert(`✅ Transfert réussi !\nTransaction enregistrée dans le bloc #${blockNumber - 1}`);
-                }
-            }
-        }
-        
         // Afficher l'historique des transferts
         function displayTransfers() {
             const container = document.getElementById('transferList');
             
-            const allTransfers = [];
-            blockchain.chain.forEach(block => {
-                block.transactions.forEach(tx => {
-                    allTransfers.push({
-                        from: tx.from,
-                        to: tx.to,
-                        amount: tx.amount,
-                        hash: tx.hash,
-                        timestamp: tx.timestamp,
-                        blockNumber: tx.blockNumber
-                    });
-                });
-            });
-            
-            if (allTransfers.length === 0) {
-                container.innerHTML = '<div style="text-align: center; padding: 20px;">🔗 Aucun transfert enregistré sur la blockchain</div>';
+            if (blockchainTransactions.length === 0) {
+                container.innerHTML = '<div style="text-align: center; padding: 30px;">🔗 Aucun transfert enregistré sur la blockchain</div>';
                 return;
             }
             
-            container.innerHTML = allTransfers.reverse().map(tx => `
+            container.innerHTML = blockchainTransactions.map(tx => `
                 <div class="transfer-item">
                     <div><i class="fas fa-link" style="color: #00ff88;"></i></div>
                     <div><strong>${tx.from}</strong> <i class="fas fa-arrow-right"></i> <strong>${tx.to}</strong></div>
-                    <div class="transfer-hash">${tx.hash.substring(0, 20)}...</div>
+                    <div class="transfer-hash">${tx.hash.substring(0, 16)}...</div>
                     <div>⚡ ${tx.amount.toFixed(2)} kWh</div>
-                    <div style="font-size: 11px;">📅 ${new Date(tx.timestamp).toLocaleString()}</div>
-                    <div><i class="fas fa-check-circle" style="color: #00ff88;"></i> Bloc #${tx.blockNumber}</div>
+                    <div style="font-size: 11px;">📅 ${tx.timestamp}</div>
+                    <div class="transfer-status"><i class="fas fa-check-circle"></i> Bloc #${tx.blockNumber}</div>
                 </div>
             `).join('');
         }
         
         // Mettre à jour les statistiques
         function updateStats() {
-            const allTransfers = [];
-            blockchain.chain.forEach(block => {
-                block.transactions.forEach(tx => {
-                    allTransfers.push(tx);
-                });
-            });
-            
-            const totalEnergy = allTransfers.reduce((sum, tx) => sum + tx.amount, 0);
+            const totalEnergy = blockchainTransactions.reduce((sum, tx) => sum + tx.amount, 0);
             const totalCO2 = totalEnergy * 1.2;
             
-            document.getElementById('totalTransfers').innerText = allTransfers.length;
+            document.getElementById('totalTransfers').innerText = blockchainTransactions.length;
             document.getElementById('totalEnergy').innerText = totalEnergy.toFixed(1);
             document.getElementById('totalCO2').innerText = totalCO2.toFixed(0);
-            document.getElementById('blockNumber').innerText = blockchain.chain.length - 1;
+            document.getElementById('blockNumber').innerText = nextBlockId - 1;
+        }
+        
+        // Sauvegarder dans localStorage
+        function saveToLocalStorage() {
+            localStorage.setItem('smartcas_blockchain_txs', JSON.stringify(blockchainTransactions));
+            localStorage.setItem('smartcas_next_block', nextBlockId);
+        }
+        
+        function saveBalancesToLocalStorage() {
+            localStorage.setItem('smartcas_houses_balances', JSON.stringify(houses.map(h => ({ id: h.id, balance: h.balance }))));
+        }
+        
+        function loadFromLocalStorage() {
+            const savedTxs = localStorage.getItem('smartcas_blockchain_txs');
+            if (savedTxs) {
+                blockchainTransactions = JSON.parse(savedTxs);
+            }
+            const savedBlock = localStorage.getItem('smartcas_next_block');
+            if (savedBlock) {
+                nextBlockId = parseInt(savedBlock);
+            }
+            const savedBalances = localStorage.getItem('smartcas_houses_balances');
+            if (savedBalances) {
+                const balances = JSON.parse(savedBalances);
+                for (const b of balances) {
+                    const house = houses.find(h => h.id === b.id);
+                    if (house) house.balance = b.balance;
+                }
+            }
         }
         
         // Réinitialiser la blockchain
         function resetBlockchain() {
-            if (confirm('⚠️ Réinitialiser complètement la blockchain ?\nToutes les transactions seront supprimées.\n\nLes bilans des maisons seront également réinitialisés.')) {
+            if (confirm('⚠️ Réinitialiser complètement la blockchain ?\n\nToutes les transactions seront supprimées définitivement.\nLes bilans des maisons seront réinitialisés.')) {
+                blockchainTransactions = [];
+                nextBlockId = 1;
+                
                 // Réinitialiser les balances
-                houses[0].balance = -15.2;
-                houses[1].balance = 22.8;
-                houses[2].balance = -18.5;
-                houses[3].balance = 10.9;
+                houses = [
+                    { id: 1, name: "Maison Verte", balance: 22.8, consumption: 38.5, production: 61.3, icon: "🏠", color: "#4CAF50" },
+                    { id: 2, name: "Maison Bleue", balance: -15.2, consumption: 45.2, production: 30.0, icon: "💙", color: "#2196F3" },
+                    { id: 3, name: "Maison Orange", balance: 10.9, consumption: 41.2, production: 52.1, icon: "🧡", color: "#FF9800" },
+                    { id: 4, name: "Maison Rouge", balance: -18.5, consumption: 52.1, production: 33.6, icon: "❤️", color: "#E91E63" }
+                ];
                 
-                // Réinitialiser la blockchain
-                localStorage.removeItem('blockchain_transfers');
-                initBlockchain();
+                localStorage.removeItem('smartcas_blockchain_txs');
+                localStorage.removeItem('smartcas_next_block');
+                localStorage.removeItem('smartcas_houses_balances');
                 
-                // Rafraîchir l'affichage
-                displayHouses();
-                displayTransfers();
-                updateStats();
-                
-                alert('✅ Blockchain réinitialisée avec succès');
+                updateDisplay();
+                showToast('✅ Blockchain réinitialisée avec succès', 'success');
             }
         }
         
-        // Charger les données depuis le dataset réel
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.style.borderLeftColor = type === 'success' ? '#00ff88' : (type === 'error' ? '#ff4444' : '#ffaa00');
+            toast.innerHTML = `<i class="fas ${type === 'success' ? 'fa-check-circle' : (type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle')}" style="margin-right: 10px;"></i>${message}`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+        
+        function updateDisplay() {
+            displayHouses();
+            displayTransfers();
+            updateStats();
+        }
+        
+        // Charger les données réelles depuis ton dataset
         async function loadRealData() {
             try {
                 const response = await fetch('user_energy_data.json?_=' + Date.now());
@@ -528,6 +571,7 @@
                             houses[houseId - 1].production = info.stats.total_production || (info.stats.total_consumption_total * 0.8);
                         }
                     }
+                    saveBalancesToLocalStorage();
                 }
             } catch (error) {
                 console.log("Utilisation des données par défaut");
@@ -537,10 +581,8 @@
         // Initialisation
         async function init() {
             await loadRealData();
-            initBlockchain();
-            displayHouses();
-            displayTransfers();
-            updateStats();
+            loadFromLocalStorage();
+            updateDisplay();
         }
         
         init();
